@@ -51,6 +51,12 @@
   .warn { background:#2a1d10; border:1px solid #5a3c14; color:#f5c98a; padding:8px 10px; border-radius:10px; font-size:12.5px; margin:8px 0; }
   .spark { display:inline-flex; gap:2px; align-items:flex-end; height:14px; }
   .spark i { display:block; width:6px; background:var(--mute); border-radius:1px; }
+  .tag { display:inline-block; font-size:10.5px; padding:1px 6px; border-radius:6px; border:1px solid #2f4a6a; color:#9cc9ff; background:#122033; margin-right:4px; }
+  .row.open { background:rgba(255,255,255,.02); }
+  .detail { grid-column: 1 / -1; background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:8px 10px; font-size:12.5px; color:var(--mute); display:grid; gap:6px; }
+  .detail b { color:var(--fg); font-weight:500; }
+  .detail svg { width:100%; height:56px; display:block; }
+  .row .name { cursor:pointer; }
   footer { color:var(--mute); font-size:11.5px; padding:14px; text-align:center; }
   @media (min-width:700px) { .row { grid-template-columns: 22px 1fr auto auto; } .row .addr, .row .acts { grid-column: auto; margin-top:0; } }
 </style>
@@ -82,15 +88,27 @@
   const fr = $('#fresh'); fr.textContent = `updated ${Math.round(ageMin)} min ago`; if (ageMin > 90) { fr.classList.add('stale'); fr.textContent += ' · STALE (bot or push may be down)'; }
 
   function copyBtn(addr) { const b = h('button', { class: 'btn', onclick: async () => { try { await navigator.clipboard.writeText(addr); b.textContent = 'copied'; b.classList.add('copied'); setTimeout(() => { b.textContent = 'copy'; b.classList.remove('copied'); }, 1200); } catch { prompt('address', addr); } } }, 'copy'); return b; }
+  function spark(series) {
+    if (!series || series.length < 2) return h('div', null, 'no history yet — our observations of this token start when a feed first shows it');
+    const xs = series.map((p) => p[0]), ys = series.map((p) => p[1]); const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+    const W = 600, H = 56, pad = 3; const px = (x) => pad + (x1 === x0 ? 0 : (x - x0) / (x1 - x0)) * (W - 2 * pad); const py = (y) => H - pad - (y1 === y0 ? 0.5 : (y - y0) / (y1 - y0)) * (H - 2 * pad);
+    const d = series.map((p, i) => `${i ? 'L' : 'M'}${px(p[0]).toFixed(1)},${py(p[1]).toFixed(1)}`).join(' ');
+    const last = series[series.length - 1][1], first = series[0][1];
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('preserveAspectRatio', 'none');
+    svg.innerHTML = `<path d="${d}" fill="none" stroke="${last >= first ? '#39c46a' : '#ff5c5c'}" stroke-width="2" vector-effect="non-scaling-stroke"/>`;
+    return h('div', null, svg, h('div', { class: 'sub', style: 'margin:2px 0 0' }, `${series.length} observations · ${age((Date.now() - x0) / 3600e3)} span · low ${usd(y0)} · high ${usd(y1)} · now ${usd(last)}`));
+  }
   function tokenRow(t, extra) {
     const chg = t.chg24; const cls = chg == null ? '' : chg >= 0 ? 'up' : 'dn';
-    return h('div', { class: 'row' },
+    let detail = null;
+    const row = h('div', { class: 'row' },
       h('div', { class: 'ph' }, ICON[t.phase] || '▫️'),
       h('div', null,
-        h('div', { class: 'name' }, t.symbol || '?', h('span', { class: 'chain' }, NET[t.chain] || t.chain)),
+        h('div', { class: 'name', onclick: () => { if (detail) { detail.remove(); detail = null; row.classList.remove('open'); return; } row.classList.add('open'); detail = h('div', { class: 'detail' }, spark(t.series), h('div', null, 'first seen by us ', h('b', null, t.firstSeen ? age((Date.now() - Date.parse(t.firstSeen)) / 3600e3) + ' ago' : '—'), t.peak7d ? [' · 7d peak ', h('b', null, usd(t.peak7d)), t.retrace != null ? ` (now ${Math.round(t.retrace * 100)}% of it)` : ''] : null, t.vol24 != null ? [' · 24h vol ', h('b', null, usd(t.vol24))] : null, t.chg6 != null ? [' · 6h ', h('b', { class: t.chg6 >= 0 ? 'up' : 'dn' }, pct(t.chg6))] : null, t.quote ? [' · quote ', h('b', null, t.quote)] : null, t.dex ? [' · ', t.dex] : null), h('div', null, 'would be picked now by: ', t.picks?.length ? t.picks.map((p) => h('span', { class: 'tag' }, p)) : h('b', null, 'no strategy'))); row.append(detail); } }, t.symbol || '?', h('span', { class: 'chain' }, NET[t.chain] || t.chain), ...(t.picks || []).slice(0, 2).map((p) => h('span', { class: 'tag', style: 'margin-left:6px' }, p))),
         h('div', { class: 'meta' }, h('span', null, 'fdv ', h('b', null, usd(t.fdv))), h('span', null, age(t.ageH)), h('span', null, 'liq ', h('b', null, usd(t.liq))), h('span', { class: cls }, pct(chg), ' 24h'), t.bs != null ? h('span', null, 'b/s ', h('b', null, t.bs.toFixed(1) + (t.bsProxy ? '*' : ''))) : null, t.retrace != null && t.retrace <= 0.6 ? h('span', { class: 'dn' }, `↓${Math.round((1 - t.retrace) * 100)}% from 7d peak ${usd(t.peak7d)}`) : null, t.themes?.length ? h('span', null, t.themes.join(', ')) : null, extra || null)),
       h('div', { class: 'addr' }, h('code', null, t.address ? t.address.slice(0, 8) + '…' + t.address.slice(-4) : '?')),
       h('div', { class: 'acts' }, t.address ? copyBtn(t.address) : null, h('a', { class: 'btn', href: dex(t), target: '_blank', rel: 'noopener' }, 'dexscreener')));
+    return row;
   }
 
   const views = {};
@@ -119,7 +137,7 @@
       list();
     };
     draw();
-    return [wrap, h('div', { class: 'sub' }, '🟩 accumulating = flat price, buyers ≥ sellers, volume alive not churning · 🚀 breaking out · 🌀 churn · 🟥 bleeding · * = buy/sell counts (no unique-wallet figure from DexScreener)')];
+    return [wrap, h('div', { class: 'sub' }, 'tap a name for its history and which shadow strategies would pick it now · 🟩 accumulating = flat price, buyers ≥ sellers, volume alive not churning · 🚀 breaking out · 🌀 churn · 🟥 bleeding · * = buy/sell counts (no unique-wallet figure from DexScreener)')];
   };
   // ---- narratives
   views.narratives = () => {
