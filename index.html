@@ -88,7 +88,7 @@
       h('div', { class: 'ph' }, ICON[t.phase] || '▫️'),
       h('div', null,
         h('div', { class: 'name' }, t.symbol || '?', h('span', { class: 'chain' }, NET[t.chain] || t.chain)),
-        h('div', { class: 'meta' }, h('span', null, 'fdv ', h('b', null, usd(t.fdv))), h('span', null, age(t.ageH)), h('span', null, 'liq ', h('b', null, usd(t.liq))), h('span', { class: cls }, pct(chg), ' 24h'), t.bs != null ? h('span', null, 'b/s ', h('b', null, t.bs.toFixed(1) + (t.bsProxy ? '*' : ''))) : null, t.themes?.length ? h('span', null, t.themes.join(', ')) : null, extra || null)),
+        h('div', { class: 'meta' }, h('span', null, 'fdv ', h('b', null, usd(t.fdv))), h('span', null, age(t.ageH)), h('span', null, 'liq ', h('b', null, usd(t.liq))), h('span', { class: cls }, pct(chg), ' 24h'), t.bs != null ? h('span', null, 'b/s ', h('b', null, t.bs.toFixed(1) + (t.bsProxy ? '*' : ''))) : null, t.retrace != null && t.retrace <= 0.6 ? h('span', { class: 'dn' }, `↓${Math.round((1 - t.retrace) * 100)}% from 7d peak ${usd(t.peak7d)}`) : null, t.themes?.length ? h('span', null, t.themes.join(', ')) : null, extra || null)),
       h('div', { class: 'addr' }, h('code', null, t.address ? t.address.slice(0, 8) + '…' + t.address.slice(-4) : '?')),
       h('div', { class: 'acts' }, t.address ? copyBtn(t.address) : null, h('a', { class: 'btn', href: dex(t), target: '_blank', rel: 'noopener' }, 'dexscreener')));
   }
