@@ -1,0 +1,3835 @@
+{
+  "schema": "hood-board/1",
+  "generatedAt": "2026-09-06T20:18:40.844Z",
+  "scope": "public scans only — no portfolio, wallets, cards, notes or keys",
+  "bands": {
+    "100k-500k": {
+      "at": "2026-09-06T20:16:06.732Z",
+      "source": "capture 20:16Z",
+      "rows": [
+        {
+          "symbol": "孙小圣",
+          "chain": "bsc",
+          "address": "0xbb87378b58894338f0937b9691a5a6dc3a5a7777",
+          "fdv": 255081,
+          "liq": 58398.93,
+          "ageH": 56.1138075,
+          "chg24": 249,
+          "chg6": 4.46,
+          "vol24": 204241.74,
+          "bs": 1.0804776739356179,
+          "bsProxy": true,
+          "phase": "breaking out",
+          "band": "100k-500k",
+          "themes": [
+            "cjk"
+          ],
+          "quote": "WBNB",
+          "dex": "pancakeswap"
+        },
+        {
+          "symbol": "牛来",
+          "chain": "bsc",
+          "address": "0x68d12022732663576bd4f311900e23d22ccc7777",
+          "fdv": 246090.2752,
+          "liq": 133340.3844,
+          "ageH": 103.18214083333334,
+          "chg24": -23.823,
+          "chg6": 79.14,
+          "vol24": 23149054.5316602,
+          "bs": 1.0158832367460828,
+          "bsProxy": false,
+          "phase": "breaking out",
+          "band": "100k-500k",
+          "themes": [
+            "cjk"
+          ],
+          "quote": "USDT",
+          "dex": "pancakeswap_v2"
+        },
+        {
+          "symbol": "OUROBOROS",
+          "chain": "robinhood",
+          "address": "0x87af913718f73168d4566bbf51683792ac2680eb",
+          "fdv": 349021.2173,
+          "liq": 67630.1644,
+          "ageH": 118.43047416666667,
+          "chg24": -1.648,
+          "chg6": 41.89,
+          "vol24": 6670875.62999159,
+          "bs": 1,
+          "bsProxy": false,
+          "phase": "breaking out",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "CRCL",
+          "dex": "uniswap-v4-robinhood"
+        },
+        {
+          "symbol": "P",
+          "chain": "robinhood",
+          "address": "0x4b1c1725fa83d1a3effe48c992c969788cfac32a",
+          "fdv": 174303.523791788,
+          "liq": 47255.5763,
+          "ageH": 1317.3771408333334,
+          "chg24": 267.814,
+          "chg6": 3.866,
+          "vol24": 6275232.04707896,
+          "bs": 0.9707602339181286,
+          "bsProxy": false,
+          "phase": "breaking out",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "WETH",
+          "dex": "uniswap-v3-robinhood"
+        },
+        {
+          "symbol": "Bicat",
+          "chain": "bsc",
+          "address": "0xdbc6333a7d8bcd95f96641eda4d095e69f207777",
+          "fdv": 478942,
+          "liq": 88429.89,
+          "ageH": 709.9193630555556,
+          "chg24": -0.58,
+          "chg6": 15.48,
+          "vol24": 489457.45,
+          "bs": 1.4426345609065157,
+          "bsProxy": true,
+          "phase": "quiet",
+          "band": "100k-500k",
+          "themes": [
+            "animal"
+          ],
+          "quote": "QQQB",
+          "dex": "pancakeswap"
+        },
+        {
+          "symbol": "SIZE",
+          "chain": "robinhood",
+          "address": "0x0f421d05e67b9e25d754e8e685af91b37bff6cef",
+          "fdv": 157894,
+          "liq": 39294.67,
+          "ageH": 61.95102972222222,
+          "chg24": -6.28,
+          "chg6": -36.06,
+          "vol24": 286347.45,
+          "bs": 1.1362467866323906,
+          "bsProxy": true,
+          "phase": "churn",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "ETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "CUPCAKE",
+          "chain": "robinhood",
+          "address": "0x0ae4cab49b6f048f9c589a522620bebfc4ededc6",
+          "fdv": 176028.430457867,
+          "liq": 45370.2657,
+          "ageH": 31.204363055555554,
+          "chg24": -97.526,
+          "chg6": 1.72,
+          "vol24": 5112933.69929978,
+          "bs": 4.447698744769874,
+          "bsProxy": false,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "WETH",
+          "dex": "uniswap-v2-robinhood"
+        },
+        {
+          "symbol": "BRO",
+          "chain": "bsc",
+          "address": "0x292655a45d04ca013c637694447ec94ca4be7777",
+          "fdv": 102641,
+          "liq": 35601.11,
+          "ageH": 26.221863055555556,
+          "chg24": -79.31,
+          "chg6": -34.22,
+          "vol24": 1380658.25,
+          "bs": 1.2488784447767571,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "QQQB",
+          "dex": "pancakeswap"
+        },
+        {
+          "symbol": "NEKO",
+          "chain": "robinhood",
+          "address": "0xc6e8c393d46b685c2fb2177f759f2b16eb7a7d54",
+          "fdv": 422459,
+          "liq": 56824.96,
+          "ageH": 56.18575194444445,
+          "chg24": -79.22,
+          "chg6": -61.49,
+          "vol24": 1465727.71,
+          "bs": 1.2293510324483776,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "NVDA",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "RSTR",
+          "chain": "robinhood",
+          "address": "0x78b96280c3347e0f58a7147b73eb0ec5ffff025d",
+          "fdv": 131445,
+          "liq": 34144.92,
+          "ageH": 24.24491861111111,
+          "chg24": -68.96,
+          "chg6": 1.1,
+          "vol24": 2510554.84,
+          "bs": 1.225032765399738,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [
+            "rh-native",
+            "animal"
+          ],
+          "quote": "ETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "PONSTAR",
+          "chain": "robinhood",
+          "address": "0xa737df5de18e3aa6b0bf8c2e9846ed699f6f2aeb",
+          "fdv": 129044,
+          "liq": 43846,
+          "ageH": 1315.7154741666666,
+          "chg24": -50.2,
+          "chg6": -25.89,
+          "vol24": 259231.69,
+          "bs": 1.1344262295081968,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "WETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "LEGS",
+          "chain": "robinhood",
+          "address": "0x8fcf98e1348d3ddee46cdd15a5c7d9a8d423077d",
+          "fdv": 245317,
+          "liq": 46583.44,
+          "ageH": 71.24575194444445,
+          "chg24": -53.04,
+          "chg6": -28.98,
+          "vol24": 256102.56,
+          "bs": 1.1010416666666667,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "ETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "BODKIN",
+          "chain": "robinhood",
+          "address": "0xb06b1e58f5ba2a3df1ab74c01cb2a44c5395b3be",
+          "fdv": 156710,
+          "liq": 36593.65,
+          "ageH": 29.324085277777776,
+          "chg24": -58.26,
+          "chg6": -7.98,
+          "vol24": 506056.45,
+          "bs": 1.0918367346938775,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "ETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "CAP",
+          "chain": "robinhood",
+          "address": "0x2f219c706e052dc25372a0c59dcc2afe0cab12f3",
+          "fdv": 172485,
+          "liq": 33743.65,
+          "ageH": 41.26186305555556,
+          "chg24": -79.67,
+          "chg6": 10.02,
+          "vol24": 644503.39,
+          "bs": 1.0313253012048194,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "USDG",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "SLINK",
+          "chain": "robinhood",
+          "address": "0xfa89ed9d12bf74add8253ddfaa426c4d8a0fa603",
+          "fdv": 262232,
+          "liq": 41606.32,
+          "ageH": 50.20158527777778,
+          "chg24": -45.13,
+          "chg6": -10.8,
+          "vol24": 349218.26,
+          "bs": 0.90732889158086,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "100k-500k",
+          "themes": [],
+          "quote": "USDG",
+          "dex": "uniswap"
+        }
+      ]
+    },
+    "500k-1m": {
+      "at": "2026-09-06T20:16:06.732Z",
+      "source": "capture 20:16Z",
+      "rows": [
+        {
+          "symbol": "DOGE-1",
+          "chain": "robinhood",
+          "address": "0x3ec8a8174129d5cbecef67ee2af8621319c34c03",
+          "fdv": 983757,
+          "liq": 93643.25,
+          "ageH": 102.29520138888888,
+          "chg24": -8.41,
+          "chg6": 0.24,
+          "vol24": 432838.8,
+          "bs": 1.0733384262796029,
+          "bsProxy": true,
+          "phase": "accumulating",
+          "band": "500k-1m",
+          "themes": [
+            "animal"
+          ],
+          "quote": "SPCX",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "AP",
+          "chain": "robinhood",
+          "address": "0x71dff63057274f5d20330c5f18b5922b97660f9c",
+          "fdv": 781643,
+          "liq": 77795.98,
+          "ageH": 81.05353472222222,
+          "chg24": 52.62,
+          "chg6": -11.31,
+          "vol24": 722382.31,
+          "bs": 1.2156996587030717,
+          "bsProxy": true,
+          "phase": "breaking out",
+          "band": "500k-1m",
+          "themes": [
+            "animal"
+          ],
+          "quote": "NVDA",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "LATENT",
+          "chain": "robinhood",
+          "address": "0x72a9c6371efc2749e075791249cc37faa63ca9bb",
+          "fdv": 790719,
+          "liq": 711647.24,
+          "ageH": 28.966034722222222,
+          "chg24": 0.61,
+          "chg6": null,
+          "vol24": 1.45,
+          "bs": 0.5,
+          "bsProxy": true,
+          "phase": "quiet",
+          "band": "500k-1m",
+          "themes": [],
+          "quote": "ETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "股狗",
+          "chain": "bsc",
+          "address": "0x9e92bbf2017bbfb7a06c975ca30e268cd2e57777",
+          "fdv": 720731,
+          "liq": 95204.01,
+          "ageH": 34.277145833333336,
+          "chg24": -6.92,
+          "chg6": 0.36,
+          "vol24": 2278069.62,
+          "bs": 1.31044776119403,
+          "bsProxy": true,
+          "phase": "churn",
+          "band": "500k-1m",
+          "themes": [
+            "cjk",
+            "animal"
+          ],
+          "quote": "GOOGLB",
+          "dex": "pancakeswap"
+        },
+        {
+          "symbol": "NEST",
+          "chain": "robinhood",
+          "address": "0x8e859dbdfbfd2df6a99870e2871eaa58e8784e05",
+          "fdv": 657843,
+          "liq": 76292.3,
+          "ageH": 39.06409027777778,
+          "chg24": -14.89,
+          "chg6": -19.88,
+          "vol24": 1268515.88,
+          "bs": 1.1037512673200405,
+          "bsProxy": true,
+          "phase": "churn",
+          "band": "500k-1m",
+          "themes": [],
+          "quote": "ETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "OZZY",
+          "chain": "robinhood",
+          "address": "0xd85c0c5f5a81a1527bb90f225ceacfbcb590c7d9",
+          "fdv": 609992,
+          "liq": 63456.93,
+          "ageH": 28.559368055555556,
+          "chg24": -76.01,
+          "chg6": -54.44,
+          "vol24": 1368654.98,
+          "bs": 1.0717842323651452,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "500k-1m",
+          "themes": [],
+          "quote": "USDG",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "Ponsan",
+          "chain": "robinhood",
+          "address": "0x97216593d3b2769da6f0adeee6fb8e36da4e319f",
+          "fdv": 793495.638322487,
+          "liq": 171887.9806,
+          "ageH": 26.9763125,
+          "chg24": -88.541,
+          "chg6": -70.592,
+          "vol24": 4343842.66681076,
+          "bs": 1.014209591474245,
+          "bsProxy": false,
+          "phase": "bleeding",
+          "band": "500k-1m",
+          "themes": [],
+          "quote": "USDG",
+          "dex": "uniswap-v4-robinhood"
+        }
+      ]
+    },
+    "1m-5m": {
+      "at": "2026-09-06T20:16:06.732Z",
+      "source": "capture 20:16Z",
+      "rows": [
+        {
+          "symbol": "牛来",
+          "chain": "bsc",
+          "address": "0x5d78989126459d6154ed5ecad430d8c325b54df5",
+          "fdv": 3373893.1623,
+          "liq": 241866.6306,
+          "ageH": 29.743817777777778,
+          "chg24": 4378.851,
+          "chg6": -97.481,
+          "vol24": 46664050.740708,
+          "bs": 2.238861386138614,
+          "bsProxy": false,
+          "phase": "breaking out",
+          "band": "1m-5m",
+          "themes": [
+            "cjk"
+          ],
+          "quote": "USDT",
+          "dex": "pancakeswap_v2"
+        },
+        {
+          "symbol": "hoodrat",
+          "chain": "robinhood",
+          "address": "0x275bd09e2dd9ea3da99e9160277d8691e33f47fa",
+          "fdv": 1151441.792,
+          "liq": 67905.8802,
+          "ageH": 24.53354,
+          "chg24": 15.933,
+          "chg6": 150.763,
+          "vol24": 3814325.55631182,
+          "bs": 0.8514712751050911,
+          "bsProxy": false,
+          "phase": "breaking out",
+          "band": "1m-5m",
+          "themes": [
+            "rh-native",
+            "animal"
+          ],
+          "quote": "USDG",
+          "dex": "pons-v2-dex"
+        },
+        {
+          "symbol": "AST",
+          "chain": "bsc",
+          "address": "0x265b3982ea730748100947f52561a4eab54affff",
+          "fdv": 3921784.12848881,
+          "liq": 280599.901,
+          "ageH": 221.41215111111111,
+          "chg24": -19.599,
+          "chg6": -58.204,
+          "vol24": 9034204.96903524,
+          "bs": 1.036477160696681,
+          "bsProxy": false,
+          "phase": "churn",
+          "band": "1m-5m",
+          "themes": [],
+          "quote": "WBNB",
+          "dex": "pancakeswap_v2"
+        },
+        {
+          "symbol": "LIT",
+          "chain": "robinhood",
+          "address": "0xeeca2e7dc194a320d349122d88259bb9595a4cb0",
+          "fdv": 1325518.14350656,
+          "liq": 921624.4672,
+          "ageH": 25.538262222222222,
+          "chg24": 1.7,
+          "chg6": 5.607,
+          "vol24": 5033467.58728302,
+          "bs": 1.0180632212744607,
+          "bsProxy": false,
+          "phase": "churn",
+          "band": "1m-5m",
+          "themes": [],
+          "quote": "USDG",
+          "dex": "uniswap-v4-robinhood"
+        },
+        {
+          "symbol": "MRNAB",
+          "chain": "bsc",
+          "address": "0x5fd86da9b05abe396fe9d02a4a213a7c00556503",
+          "fdv": 1132349.12183368,
+          "liq": 186736.9142,
+          "ageH": 85.62548444444444,
+          "chg24": 0.714,
+          "chg6": 0.736,
+          "vol24": 2720219.80675872,
+          "bs": 1.0038480038480038,
+          "bsProxy": false,
+          "phase": "churn",
+          "band": "1m-5m",
+          "themes": [],
+          "quote": "USDT",
+          "dex": "pancakeswap-v3-bsc"
+        },
+        {
+          "symbol": "HOOD",
+          "chain": "robinhood",
+          "address": "0x32ac8c1d7672667d5ebdea22935f7b06fc8d496f",
+          "fdv": 1639419.30922778,
+          "liq": 266334.6543,
+          "ageH": 86.70548444444445,
+          "chg24": 0.619,
+          "chg6": 1.237,
+          "vol24": 4596414.76325139,
+          "bs": 0.9389398344889287,
+          "bsProxy": false,
+          "phase": "churn",
+          "band": "1m-5m",
+          "themes": [
+            "rh-native",
+            "stockref"
+          ],
+          "quote": "USDG",
+          "dex": "uniswap-v4-robinhood"
+        },
+        {
+          "symbol": "BNBCAT",
+          "chain": "bsc",
+          "address": "0x3efbfff95576e1d23cf6ead0acd2e73f4d6a7777",
+          "fdv": 1409164,
+          "liq": 162427.42,
+          "ageH": 369.0163177777778,
+          "chg24": -54.36,
+          "chg6": -0.79,
+          "vol24": 1059685.44,
+          "bs": 1.3718772305496074,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "1m-5m",
+          "themes": [
+            "bsc-native",
+            "animal"
+          ],
+          "quote": "WBNB",
+          "dex": "pancakeswap"
+        },
+        {
+          "symbol": "Sue",
+          "chain": "bsc",
+          "address": "0x2ab8a4dd2191989ac2898006df350b236d2b7777",
+          "fdv": 4726352.03230454,
+          "liq": 327998.0221,
+          "ageH": 319.5021511111111,
+          "chg24": -40.311,
+          "chg6": -30.858,
+          "vol24": 12126764.4912727,
+          "bs": 1.0820322836729293,
+          "bsProxy": false,
+          "phase": "bleeding",
+          "band": "1m-5m",
+          "themes": [
+            "cjk"
+          ],
+          "quote": "WBNB",
+          "dex": "pancakeswap_v2"
+        },
+        {
+          "symbol": "par",
+          "chain": "robinhood",
+          "address": "0x507b6f349a80114097a67b8b4677367acc15b220",
+          "fdv": 3155912.034,
+          "liq": 443543.657,
+          "ageH": 48.23020666666667,
+          "chg24": -46.336,
+          "chg6": -37.682,
+          "vol24": 3983537.64845386,
+          "bs": 0.9888888888888889,
+          "bsProxy": false,
+          "phase": "bleeding",
+          "band": "1m-5m",
+          "themes": [],
+          "quote": "WETH",
+          "dex": "uniswap-v4-robinhood"
+        },
+        {
+          "symbol": "HOVER",
+          "chain": "robinhood",
+          "address": "0xf7d2a651188ea9f52cc802b3d962eb6c88bfaba3",
+          "fdv": 1021378,
+          "liq": 253615.99,
+          "ageH": 46.515206666666664,
+          "chg24": -66.67,
+          "chg6": -23.55,
+          "vol24": 1480635.09,
+          "bs": 0.6373239436619719,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "1m-5m",
+          "themes": [],
+          "quote": "WETH",
+          "dex": "uniswap"
+        }
+      ]
+    },
+    "5m-20m": {
+      "at": "2026-09-06T20:16:06.732Z",
+      "source": "capture 20:16Z",
+      "rows": [
+        {
+          "symbol": "ROBINCAT",
+          "chain": "robinhood",
+          "address": "0xded852de9fe9ba9b6f27f39e8e81cf851a5c79cc",
+          "fdv": 8527903,
+          "liq": 237267.39,
+          "ageH": 142.01187833333333,
+          "chg24": -12.92,
+          "chg6": -3.29,
+          "vol24": 1581981.08,
+          "bs": 1.1615610574905582,
+          "bsProxy": true,
+          "phase": "accumulating",
+          "band": "5m-20m",
+          "themes": [
+            "rh-native",
+            "animal"
+          ],
+          "quote": "USDG",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "Stonks",
+          "chain": "bsc",
+          "address": "0xc9d825e83aada475bd4d38c8ca984ed746277777",
+          "fdv": 12383229.85,
+          "liq": 338018.278,
+          "ageH": 55.97132277777778,
+          "chg24": 2.776,
+          "chg6": 13.102,
+          "vol24": 5557241.67345953,
+          "bs": 1.1555104800540905,
+          "bsProxy": false,
+          "phase": "accumulating",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "USDT",
+          "dex": "pancakeswap-v3-bsc"
+        },
+        {
+          "symbol": "FLORK",
+          "chain": "bsc",
+          "address": "0xf40592daacb3e5abf358789f5688c0b4f64d7777",
+          "fdv": 18827506.2398306,
+          "liq": 224526.0235,
+          "ageH": 185.06382277777777,
+          "chg24": -11.501,
+          "chg6": -8.211,
+          "vol24": 3021663.94526348,
+          "bs": 1.1243432574430823,
+          "bsProxy": false,
+          "phase": "accumulating",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "USDT",
+          "dex": "pancakeswap-v3-bsc"
+        },
+        {
+          "symbol": "HOOKR",
+          "chain": "robinhood",
+          "address": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c",
+          "fdv": 16700479,
+          "liq": 882074.07,
+          "ageH": 759.9621561111111,
+          "chg24": -14.83,
+          "chg6": 9.78,
+          "vol24": 2402950.29,
+          "bs": 1.0404569252736793,
+          "bsProxy": true,
+          "phase": "accumulating",
+          "band": "5m-20m",
+          "themes": [
+            "infra"
+          ],
+          "quote": "ETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "ROBIN",
+          "chain": "robinhood",
+          "address": "0x11b70d0243baf75e85ce03201a92b5b7c33beb59",
+          "fdv": 11021324.7345186,
+          "liq": 271658.1661,
+          "ageH": 27.411045,
+          "chg24": 528.833,
+          "chg6": -39.411,
+          "vol24": 9351561.65759582,
+          "bs": 1.2959141560049525,
+          "bsProxy": false,
+          "phase": "breaking out",
+          "band": "5m-20m",
+          "themes": [
+            "rh-native",
+            "animal"
+          ],
+          "quote": "USDG",
+          "dex": "pons-v2-dex"
+        },
+        {
+          "symbol": "NUKE",
+          "chain": "robinhood",
+          "address": "0x0000000005aca17e8bd5779fc87e13cb433aed24",
+          "fdv": 8312604.97338181,
+          "liq": 951127.0948,
+          "ageH": 32.41243388888889,
+          "chg24": 59.16,
+          "chg6": -4.21,
+          "vol24": 5576068.68105659,
+          "bs": 0.9240963855421687,
+          "bsProxy": false,
+          "phase": "breaking out",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "USDG",
+          "dex": "giga-v3"
+        },
+        {
+          "symbol": "memestock",
+          "chain": "bsc",
+          "address": "0x6ff45323817d1d53bbb8a8dfba9245ae74057777",
+          "fdv": 12143835,
+          "liq": 444777.23,
+          "ageH": 606.5557672222222,
+          "chg24": -23,
+          "chg6": 2.32,
+          "vol24": 1379110.66,
+          "bs": 1.118816458622284,
+          "bsProxy": true,
+          "phase": "quiet",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "GMEB",
+          "dex": "pancakeswap"
+        },
+        {
+          "symbol": "DELTA",
+          "chain": "robinhood",
+          "address": "0xe8ffd7e24187f72afb08d75b1bb13088a989a791",
+          "fdv": 10884060,
+          "liq": 917325.06,
+          "ageH": 885.3193783333334,
+          "chg24": -20.6,
+          "chg6": -8.05,
+          "vol24": 2493377.8,
+          "bs": 1.077371489136195,
+          "bsProxy": true,
+          "phase": "quiet",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "WETH",
+          "dex": "uniswap"
+        },
+        {
+          "symbol": "NVDAB",
+          "chain": "bsc",
+          "address": "0x02fca66c1d1afb4e2a7884261eb00f63598a7436",
+          "fdv": 16135018,
+          "liq": 1868689.21,
+          "ageH": 948.5988227777777,
+          "chg24": -0.06,
+          "chg6": -0.05,
+          "vol24": 2309420.78,
+          "bs": 0.9460814094775213,
+          "bsProxy": true,
+          "phase": "quiet",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "USDT",
+          "dex": "pancakeswap"
+        },
+        {
+          "symbol": "ZZZ",
+          "chain": "robinhood",
+          "address": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a",
+          "fdv": 19225971.6120761,
+          "liq": 402905.7153,
+          "ageH": 44.394933888888886,
+          "chg24": 29.876,
+          "chg6": -13.898,
+          "vol24": 8197840.74149943,
+          "bs": 0.7696501590186279,
+          "bsProxy": false,
+          "phase": "quiet",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "WETH",
+          "dex": "pons-v2-dex"
+        },
+        {
+          "symbol": "KII",
+          "chain": "bsc",
+          "address": "0xeec6574eabba52bac3f0277f2cd5ac7e67197886",
+          "fdv": 16467400.1495621,
+          "liq": 784029.5481,
+          "ageH": 589.8516005555556,
+          "chg24": 0.723,
+          "chg6": -0.465,
+          "vol24": 164384781.194959,
+          "bs": 0.9874551971326165,
+          "bsProxy": false,
+          "phase": "churn",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "USDT",
+          "dex": "pancakeswap-infinity-clmm"
+        },
+        {
+          "symbol": "Max",
+          "chain": "bsc",
+          "address": "0xe9bc5c6a86caa44fd7b469bf3cc7c563e4f77777",
+          "fdv": 19079659,
+          "liq": 601618.4,
+          "ageH": 876.4774338888889,
+          "chg24": -33.63,
+          "chg6": -5.58,
+          "vol24": 1736469.63,
+          "bs": 1.329655172413793,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "5m-20m",
+          "themes": [],
+          "quote": "WBNB",
+          "dex": "pancakeswap"
+        },
+        {
+          "symbol": "b-money",
+          "chain": "bsc",
+          "address": "0xf49725118cb0707b8706ffffe895f3ab16da7777",
+          "fdv": 7659737,
+          "liq": 336773.03,
+          "ageH": 359.82187833333336,
+          "chg24": -41.15,
+          "chg6": -23.53,
+          "vol24": 2636843.83,
+          "bs": 1.0837742504409171,
+          "bsProxy": true,
+          "phase": "bleeding",
+          "band": "5m-20m",
+          "themes": [
+            "btc",
+            "finance-meme"
+          ],
+          "quote": "BTCB",
+          "dex": "pancakeswap"
+        }
+      ]
+    }
+  },
+  "narratives": [
+    {
+      "tag": "animal",
+      "n": 22,
+      "chains": [
+        "solana",
+        "robinhood",
+        "bsc"
+      ],
+      "vol24": 87379137.6919385,
+      "fresh": 3,
+      "betaSignal": false,
+      "runningBetas": 7,
+      "leader": {
+        "symbol": "ANSEM",
+        "chain": "solana",
+        "address": "9crcn9rgt8v2imem2baks13yhmeais3rum3rpvtgpump",
+        "fdv": 235505020.503058,
+        "liq": 2136358.0925,
+        "ageH": 1693.5792561111111,
+        "chg24": -5.688,
+        "chg6": -4.993,
+        "vol24": 7754145.65862871,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "SOL",
+        "dex": null
+      },
+      "members": [
+        {
+          "symbol": "AI",
+          "chain": "robinhood",
+          "address": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+          "fdv": 230725532.958084,
+          "liq": 23386598.5071,
+          "ageH": 1298.2783366666667,
+          "chg24": -9.104,
+          "chg6": 21.933,
+          "vol24": 4966322.01050644,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "NVDA",
+          "dex": null
+        },
+        {
+          "symbol": "CASHCAT",
+          "chain": "robinhood",
+          "address": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+          "fdv": 219264433.689995,
+          "liq": 3360855.2405,
+          "ageH": 1608.4419477777778,
+          "chg24": -13.096,
+          "chg6": -1.142,
+          "vol24": 15980928.0828014,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "WETH",
+          "dex": null
+        },
+        {
+          "symbol": "ZCAT",
+          "chain": "solana",
+          "address": "hcrlc9vdgjlek154xdawfb1dmvj98dosqcwthgqidejr",
+          "fdv": 125291248.95193,
+          "liq": 1108930.3711,
+          "ageH": 144.0542561111111,
+          "chg24": 426.77,
+          "chg6": 20.942,
+          "vol24": 7073957.2769257,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "SOL",
+          "dex": null
+        },
+        {
+          "symbol": "BULLA",
+          "chain": "bsc",
+          "address": "0x595e21b20e78674f8a64c1566a20b2b316bc3511",
+          "fdv": 75188729.2231786,
+          "liq": 49931.8091,
+          "ageH": 10906.10318138889,
+          "chg24": 18.817,
+          "chg6": -12.268,
+          "vol24": 1628787.43727478,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "USDT",
+          "dex": null
+        },
+        {
+          "symbol": "WKC",
+          "chain": "bsc",
+          "address": "0x6ec90334d89dbdc89e08a133271be3d104128edb",
+          "fdv": 48064935.9200673,
+          "liq": 1309165.5943,
+          "ageH": 39148.5703225,
+          "chg24": -9.029,
+          "chg6": 1.55,
+          "vol24": 123074.636643768,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "WBNB",
+          "dex": null
+        }
+      ]
+    },
+    {
+      "tag": "cjk",
+      "n": 5,
+      "chains": [
+        "bsc"
+      ],
+      "vol24": 76322909.83879155,
+      "fresh": 0,
+      "betaSignal": false,
+      "runningBetas": 3,
+      "leader": {
+        "symbol": "牛来",
+        "chain": "bsc",
+        "address": "0xbeea1d618e533a387d941f58a7d4c9b7bd377777",
+        "fdv": 92853463.0995846,
+        "liq": 1177362.6415,
+        "ageH": 526.1333780555556,
+        "chg24": -20.506,
+        "chg6": -1.69,
+        "vol24": 16485698.1772493,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "USDT",
+        "dex": null
+      },
+      "members": [
+        {
+          "symbol": "哈基米",
+          "chain": "bsc",
+          "address": "0x82ec31d69b3c289e541b50e30681fd1acad24444",
+          "fdv": 57680943.8247137,
+          "liq": 2759843.5802,
+          "ageH": 8012.983655833334,
+          "chg24": 219.212,
+          "chg6": -8.972,
+          "vol24": 42649954.9633989,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "WBNB",
+          "dex": null
+        },
+        {
+          "symbol": "Sue",
+          "chain": "bsc",
+          "address": "0x2ab8a4dd2191989ac2898006df350b236d2b7777",
+          "fdv": 4553156.39474771,
+          "liq": 319690.1334,
+          "ageH": 319.32504472222223,
+          "chg24": -42.902,
+          "chg6": -30.058,
+          "vol24": 12120271.2385425,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "WBNB",
+          "dex": null
+        },
+        {
+          "symbol": "噜噜",
+          "chain": "bsc",
+          "address": "0x63d9b8830255ba8ceaf3958e6f2906e52b424444",
+          "fdv": 289136.8937,
+          "liq": 79376.7816,
+          "ageH": 8015.886433611111,
+          "chg24": 1159.942,
+          "chg6": -79.198,
+          "vol24": 4866392.32491058,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "WBNB",
+          "dex": null
+        },
+        {
+          "symbol": "孙小圣",
+          "chain": "bsc",
+          "address": "0xbb87378b58894338f0937b9691a5a6dc3a5a7777",
+          "fdv": 252703.958229753,
+          "liq": 58066.8645,
+          "ageH": 55.93671138888889,
+          "chg24": 252.52,
+          "chg6": 5.071,
+          "vol24": 200593.134690276,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "WBNB",
+          "dex": null
+        }
+      ]
+    },
+    {
+      "tag": "finance-meme",
+      "n": 6,
+      "chains": [
+        "robinhood",
+        "solana",
+        "bsc"
+      ],
+      "vol24": 52541737.792225726,
+      "fresh": 2,
+      "betaSignal": false,
+      "runningBetas": 3,
+      "leader": {
+        "symbol": "CASHCAT",
+        "chain": "robinhood",
+        "address": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+        "fdv": 219264433.689995,
+        "liq": 3360855.2405,
+        "ageH": 1608.4419477777778,
+        "chg24": -13.096,
+        "chg6": -1.142,
+        "vol24": 15980928.0828014,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "WETH",
+        "dex": null
+      },
+      "members": [
+        {
+          "symbol": "ZEC",
+          "chain": "solana",
+          "address": "a7bdiyds5gjqgftxf17pprhtdkpkkrqbktr27dxvqxas",
+          "fdv": 115516054.24746,
+          "liq": 1878463.5573,
+          "ageH": 164.63842277777778,
+          "chg24": 20.684,
+          "chg6": 3.693,
+          "vol24": 32131832.7227507,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "ZCAT",
+          "dex": null
+        },
+        {
+          "symbol": "b-money",
+          "chain": "bsc",
+          "address": "0xf49725118cb0707b8706ffffe895f3ab16da7777",
+          "fdv": 6918979.113,
+          "liq": 320594.8785,
+          "ageH": 359.49480805555555,
+          "chg24": -35.228,
+          "chg6": -25.394,
+          "vol24": 2628362.62983698,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "BTCB",
+          "dex": null
+        },
+        {
+          "symbol": "moonkey",
+          "chain": "solana",
+          "address": "brz5aejcdurua42v1cntqkvofa2g7ds3yyxx1pzepump",
+          "fdv": 1106158.98635638,
+          "liq": 121563.8038,
+          "ageH": 235.37981166666665,
+          "chg24": 157.445,
+          "chg6": -6.134,
+          "vol24": 529114.918966579,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "SOL",
+          "dex": null
+        },
+        {
+          "symbol": "PUMPANY",
+          "chain": "solana",
+          "address": "8qa3pchskgagsbnysbenv5prstgcuanwoopngrkjpump",
+          "fdv": 90133.2911208139,
+          "liq": 26167.395,
+          "ageH": 22.79635972222222,
+          "chg24": 112.883,
+          "chg6": -3.371,
+          "vol24": 850139.588844552,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "SOL",
+          "dex": null
+        },
+        {
+          "symbol": "IBRL",
+          "chain": "solana",
+          "address": "6fwkofmhtsds8tc9dqtnk4tjad2fppcay44tqiur8rz",
+          "fdv": 54587.5091876196,
+          "liq": 21906.966,
+          "ageH": 34.01833361111111,
+          "chg24": -60.602,
+          "chg6": -16.737,
+          "vol24": 421359.849025521,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "SOL",
+          "dex": null
+        }
+      ]
+    },
+    {
+      "tag": "quote-meme:ZCAT",
+      "n": 1,
+      "chains": [
+        "solana"
+      ],
+      "vol24": 32131832.7227507,
+      "fresh": 0,
+      "betaSignal": false,
+      "runningBetas": 0,
+      "leader": {
+        "symbol": "ZEC",
+        "chain": "solana",
+        "address": "a7bdiyds5gjqgftxf17pprhtdkpkkrqbktr27dxvqxas",
+        "fdv": 115516054.24746,
+        "liq": 1878463.5573,
+        "ageH": 164.63842277777778,
+        "chg24": 20.684,
+        "chg6": 3.693,
+        "vol24": 32131832.7227507,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "ZCAT",
+        "dex": null
+      },
+      "members": []
+    },
+    {
+      "tag": "quote:QQQB",
+      "n": 2,
+      "chains": [
+        "bsc"
+      ],
+      "vol24": 25997635.4122194,
+      "fresh": 1,
+      "betaSignal": false,
+      "runningBetas": 1,
+      "leader": {
+        "symbol": "BEN",
+        "chain": "bsc",
+        "address": "0x7bc70ae0f2a67d2fdc0180a697a611f21c857777",
+        "fdv": 5705226.756,
+        "liq": 301004.1904,
+        "ageH": 9.016155833333332,
+        "chg24": 8553.324,
+        "chg6": -20.187,
+        "vol24": 25524242.3368015,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "QQQB",
+        "dex": null
+      },
+      "members": [
+        {
+          "symbol": "Bicat",
+          "chain": "bsc",
+          "address": "0xdbc6333a7d8bcd95f96641eda4d095e69f207777",
+          "fdv": 535713.587578705,
+          "liq": 93628.7449,
+          "ageH": 708.8972619444445,
+          "chg24": 21.976,
+          "chg6": 34.602,
+          "vol24": 473393.075417902,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "QQQB",
+          "dex": null
+        }
+      ]
+    },
+    {
+      "tag": "stockref",
+      "n": 2,
+      "chains": [
+        "solana"
+      ],
+      "vol24": 17879911.849434443,
+      "fresh": 1,
+      "betaSignal": false,
+      "runningBetas": 1,
+      "leader": {
+        "symbol": "USELESS",
+        "chain": "solana",
+        "address": "dz9mq9nzkbccsugpfj3r1bs4wgqkmhbpivuniw8mbonk",
+        "fdv": 222435033.62497,
+        "liq": 4644022.2674,
+        "ageH": 11621.748700555556,
+        "chg24": -19.835,
+        "chg6": 1.644,
+        "vol24": 12767337.1789788,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "SOL",
+        "dex": null
+      },
+      "members": [
+        {
+          "symbol": "USEFUL",
+          "chain": "solana",
+          "address": "gwtp6m5bxhaj1k2kxvf8hhyahe6jzmhh4ckzfucpnc83",
+          "fdv": 1295952.67494,
+          "liq": 143759.5488,
+          "ageH": 28.78703388888889,
+          "chg24": 136.526,
+          "chg6": -36.342,
+          "vol24": 5112574.67045564,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "USELESS",
+          "dex": null
+        }
+      ]
+    },
+    {
+      "tag": "ai",
+      "n": 3,
+      "chains": [
+        "robinhood",
+        "solana"
+      ],
+      "vol24": 15506628.10737617,
+      "fresh": 1,
+      "betaSignal": false,
+      "runningBetas": 2,
+      "leader": {
+        "symbol": "AI",
+        "chain": "robinhood",
+        "address": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+        "fdv": 230725532.958084,
+        "liq": 23386598.5071,
+        "ageH": 1298.2783366666667,
+        "chg24": -9.104,
+        "chg6": 21.933,
+        "vol24": 4966322.01050644,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "NVDA",
+        "dex": null
+      },
+      "members": [
+        {
+          "symbol": "AGI",
+          "chain": "solana",
+          "address": "cawzeum4fvx9dpkjgc2xhs6tsn3qjftwyvag77am5o7h",
+          "fdv": 6911095.04808254,
+          "liq": 375877.3777,
+          "ageH": 53.35453388888889,
+          "chg24": 312.735,
+          "chg6": 25.474,
+          "vol24": 8610871.84682615,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "ANTHRP",
+          "dex": null
+        },
+        {
+          "symbol": "AOBS",
+          "chain": "robinhood",
+          "address": "0x47366e0f257ac009e82bd46fb74e2fb50826ce98",
+          "fdv": 457134.2839,
+          "liq": 62673.9539,
+          "ageH": 22.75055888888889,
+          "chg24": 689.551,
+          "chg6": -37.578,
+          "vol24": 1929434.25004358,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "WETH",
+          "dex": null
+        }
+      ]
+    },
+    {
+      "tag": "rh-native",
+      "n": 3,
+      "chains": [
+        "robinhood"
+      ],
+      "vol24": 13146567.89837718,
+      "fresh": 1,
+      "betaSignal": false,
+      "runningBetas": 1,
+      "leader": {
+        "symbol": "WALLET",
+        "chain": "robinhood",
+        "address": "0x0339f5459fc690ac85f1782e15782a151b4a9e1b",
+        "fdv": 22683627.69,
+        "liq": 1676456.4991,
+        "ageH": 1395.7694802777778,
+        "chg24": 17.49,
+        "chg6": -8.671,
+        "vol24": 1244248.40715156,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "WETH",
+        "dex": null
+      },
+      "members": [
+        {
+          "symbol": "ROBIN",
+          "chain": "robinhood",
+          "address": "0x11b70d0243baf75e85ce03201a92b5b7c33beb59",
+          "fdv": 11501861.9296803,
+          "liq": 282834.5787,
+          "ageH": 27.18667,
+          "chg24": 1049.047,
+          "chg6": -39.228,
+          "vol24": 9453527.63241947,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "USDG",
+          "dex": null
+        },
+        {
+          "symbol": "ROBINCAT",
+          "chain": "robinhood",
+          "address": "0xded852de9fe9ba9b6f27f39e8e81cf851a5c79cc",
+          "fdv": 8499702.08630338,
+          "liq": 202854.7994,
+          "ageH": 136.74861444444446,
+          "chg24": -18.841,
+          "chg6": -6.131,
+          "vol24": 2448791.85880615,
+          "bs": null,
+          "bsProxy": false,
+          "phase": null,
+          "band": null,
+          "themes": [],
+          "quote": "USDG",
+          "dex": null
+        }
+      ]
+    },
+    {
+      "tag": "quote-meme:HYPE",
+      "n": 1,
+      "chains": [
+        "solana"
+      ],
+      "vol24": 8821900.07743453,
+      "fresh": 0,
+      "betaSignal": false,
+      "runningBetas": 0,
+      "leader": {
+        "symbol": "PURR",
+        "chain": "solana",
+        "address": "8rnuw4n655vsrzkuhgdywhbsmdtrhegufpfxbpe2nzhq",
+        "fdv": 11469293.8101726,
+        "liq": 531866.5805,
+        "ageH": 427.0203672222222,
+        "chg24": 467.94,
+        "chg6": -34.033,
+        "vol24": 8821900.07743453,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "HYPE",
+        "dex": null
+      },
+      "members": []
+    },
+    {
+      "tag": "quote-meme:ANTHRP",
+      "n": 1,
+      "chains": [
+        "solana"
+      ],
+      "vol24": 8610871.84682615,
+      "fresh": 0,
+      "betaSignal": false,
+      "runningBetas": 0,
+      "leader": {
+        "symbol": "AGI",
+        "chain": "solana",
+        "address": "cawzeum4fvx9dpkjgc2xhs6tsn3qjftwyvag77am5o7h",
+        "fdv": 6911095.04808254,
+        "liq": 375877.3777,
+        "ageH": 53.35453388888889,
+        "chg24": 312.735,
+        "chg6": 25.474,
+        "vol24": 8610871.84682615,
+        "bs": null,
+        "bsProxy": false,
+        "phase": null,
+        "band": null,
+        "themes": [],
+        "quote": "ANTHRP",
+        "dex": null
+      },
+      "members": []
+    }
+  ],
+  "lifecycle": [
+    {
+      "symbol": "SHRUB",
+      "chain": "robinhood",
+      "address": "0x5d9144d2d017386519a7134fcc7f1e4ba22f920c",
+      "firstLook": "2026-09-05T23:39:23.189Z",
+      "ageH": 20.654894444444444,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 25488075.4284206,
+      "nowFdv": 80153667.9448238,
+      "nowMult": 3.14,
+      "peakMult": 3.14,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1.116,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 1.42,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 26,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "MEME",
+      "chain": "robinhood",
+      "address": "0x385f4f8ae47651ce5f58f5265395a669f8281e18",
+      "firstLook": "2026-09-05T23:05:09.251Z",
+      "ageH": 21.225432777777776,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 43943909.7123597,
+      "nowFdv": 112703424.850461,
+      "nowMult": 2.56,
+      "peakMult": 2.56,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1.184,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 1.039,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 46,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "LIGERCOIN",
+      "chain": "robinhood",
+      "address": "0xcb82242fbe6f1b46a32841cf0112684074301e18",
+      "firstLook": "2026-09-05T23:05:09.250Z",
+      "ageH": 21.225433055555555,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 76841576.71,
+      "nowFdv": 59657600.27,
+      "nowMult": 0.78,
+      "peakMult": 1.51,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1.506,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.315,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 35,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "孙小圣",
+      "chain": "bsc",
+      "address": "0xbb87378b58894338f0937b9691a5a6dc3a5a7777",
+      "firstLook": "2026-09-06T10:27:45.218Z",
+      "ageH": 9.848775555555555,
+      "source": "board:bands:100k-500k",
+      "band": "100k-500k",
+      "phase": "breaking out",
+      "entryFdv": 186570,
+      "nowFdv": 255081,
+      "nowMult": 1.37,
+      "peakMult": 1.37,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1.079,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 1.245,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 24,
+      "sources": [
+        "board:bands:100k-500k",
+        "scan"
+      ]
+    },
+    {
+      "symbol": "牛来",
+      "chain": "bsc",
+      "address": "0x68d12022732663576bd4f311900e23d22ccc7777",
+      "firstLook": "2026-09-05T23:39:33.376Z",
+      "ageH": 20.65206472222222,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 435414.8172,
+      "nowFdv": 246090.2752,
+      "nowMult": 0.57,
+      "peakMult": 1.25,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1.251,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 1.172,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 42,
+      "sources": [
+        "board:betas",
+        "board:bands:100k-500k"
+      ]
+    },
+    {
+      "symbol": "OUROBOROS",
+      "chain": "robinhood",
+      "address": "0x87af913718f73168d4566bbf51683792ac2680eb",
+      "firstLook": "2026-09-06T17:04:26.635Z",
+      "ageH": 3.2372708333333335,
+      "source": "board:bands:100k-500k",
+      "band": "100k-500k",
+      "phase": "breaking out",
+      "entryFdv": 347727.7624,
+      "nowFdv": 349021.2173,
+      "nowMult": 1,
+      "peakMult": 1.15,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1.153,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 9,
+      "sources": [
+        "board:bands:100k-500k"
+      ]
+    },
+    {
+      "symbol": "ZZZ",
+      "chain": "robinhood",
+      "address": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a",
+      "firstLook": "2026-09-06T00:12:42.399Z",
+      "ageH": 20.099558333333334,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 21586424.9547118,
+      "nowFdv": 19225971.6120761,
+      "nowMult": 0.89,
+      "peakMult": 1.14,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1.143,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.851,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 33,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "SHROOM",
+      "chain": "robinhood",
+      "address": "0xab093def657f15df31b33922a95e047add645b29",
+      "firstLook": "2026-09-05T23:05:09.251Z",
+      "ageH": 21.225432777777776,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 38297684.8583596,
+      "nowFdv": 33672445.2777183,
+      "nowMult": 0.88,
+      "peakMult": 1.12,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.998,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 1.121,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 30,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "PONSTAR",
+      "chain": "robinhood",
+      "address": "0xa737df5de18e3aa6b0bf8c2e9846ed699f6f2aeb",
+      "firstLook": "2026-09-06T10:27:45.217Z",
+      "ageH": 9.848775833333333,
+      "source": "board:bands:100k-500k",
+      "band": "100k-500k",
+      "phase": "breaking out",
+      "entryFdv": 203313,
+      "nowFdv": 129044,
+      "nowMult": 0.63,
+      "peakMult": 1.06,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1.056,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.725,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 10,
+      "sources": [
+        "board:bands:100k-500k"
+      ]
+    },
+    {
+      "symbol": "amc",
+      "chain": "robinhood",
+      "address": "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b",
+      "firstLook": "2026-09-05T23:05:09.251Z",
+      "ageH": 21.225432777777776,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 7470939.70639272,
+      "nowFdv": 7763199.96909633,
+      "nowMult": 1.04,
+      "peakMult": 1.04,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.994,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 1.002,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 21,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "GOOSE",
+      "chain": "robinhood",
+      "address": "0x348cc963411fb82cd6e0b64345714fec94f242cb",
+      "firstLook": "2026-09-06T12:46:15.198Z",
+      "ageH": 7.540447777777778,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 82147800.12,
+      "nowFdv": 81767995.52,
+      "nowMult": 1,
+      "peakMult": 1,
+      "points": [
+        {
+          "h": 60,
+          "mult": 1,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.992,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 4,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "ROBIN",
+      "chain": "robinhood",
+      "address": "0x11b70d0243baf75e85ce03201a92b5b7c33beb59",
+      "firstLook": "2026-09-06T17:03:16.276Z",
+      "ageH": 3.256815,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 16299024.0534456,
+      "nowFdv": 11021324.7345186,
+      "nowMult": 0.68,
+      "peakMult": 0.99,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.994,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 6,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "DEBIT",
+      "chain": "bsc",
+      "address": "0x66661c7229901f568f16bd1551b3ba826f83ce49",
+      "firstLook": "2026-09-05T23:39:33.375Z",
+      "ageH": 20.652065,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 166287347.052596,
+      "nowFdv": 155310541.954959,
+      "nowMult": 0.93,
+      "peakMult": 0.97,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.957,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.97,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 36,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "Sue",
+      "chain": "bsc",
+      "address": "0x2ab8a4dd2191989ac2898006df350b236d2b7777",
+      "firstLook": "2026-09-05T23:39:33.376Z",
+      "ageH": 20.65206472222222,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 11329315.9022904,
+      "nowFdv": 4726352.03230454,
+      "nowMult": 0.42,
+      "peakMult": 0.97,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.969,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.871,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 36,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "NUKE",
+      "chain": "robinhood",
+      "address": "0x0000000005aca17e8bd5779fc87e13cb433aed24",
+      "firstLook": "2026-09-06T12:13:15.570Z",
+      "ageH": 8.090344444444444,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 9610760.44126184,
+      "nowFdv": 8312604.97338181,
+      "nowMult": 0.86,
+      "peakMult": 0.92,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.871,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.921,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 2,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "AI",
+      "chain": "robinhood",
+      "address": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+      "firstLook": "2026-09-05T23:05:09.252Z",
+      "ageH": 21.2254325,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 269397580.308363,
+      "nowFdv": 224322305.394447,
+      "nowMult": 0.83,
+      "peakMult": 0.9,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.901,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.759,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 46,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "NEST",
+      "chain": "robinhood",
+      "address": "0x8e859dbdfbfd2df6a99870e2871eaa58e8784e05",
+      "firstLook": "2026-09-06T05:19:16.735Z",
+      "ageH": 14.990020555555555,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 1179924.914,
+      "nowFdv": 657843,
+      "nowMult": 0.56,
+      "peakMult": 0.9,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.9,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.794,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 2,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "SLINK",
+      "chain": "robinhood",
+      "address": "0xfa89ed9d12bf74add8253ddfaa426c4d8a0fa603",
+      "firstLook": "2026-09-05T23:05:09.247Z",
+      "ageH": 21.225433333333335,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 392087.214760122,
+      "nowFdv": 262232,
+      "nowMult": 0.67,
+      "peakMult": 0.86,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.852,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.863,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 6,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "P",
+      "chain": "robinhood",
+      "address": "0x4b1c1725fa83d1a3effe48c992c969788cfac32a",
+      "firstLook": "2026-09-06T10:27:45.218Z",
+      "ageH": 9.848775555555555,
+      "source": "board:bands:100k-500k",
+      "band": "100k-500k",
+      "phase": "breaking out",
+      "entryFdv": 236075.959272171,
+      "nowFdv": 174303.523791788,
+      "nowMult": 0.74,
+      "peakMult": 0.84,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.839,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.41,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 17,
+      "sources": [
+        "board:bands:100k-500k"
+      ]
+    },
+    {
+      "symbol": "PONSERS",
+      "chain": "robinhood",
+      "address": "0xb9e75a12de07c55c1496b36dcdac55764440b8c8",
+      "firstLook": "2026-09-06T12:13:56.527Z",
+      "ageH": 8.0789675,
+      "source": "board:bands:100k-500k",
+      "band": "100k-500k",
+      "phase": "accumulating",
+      "entryFdv": 208652,
+      "nowFdv": 4028,
+      "nowMult": 0.02,
+      "peakMult": 0.76,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.756,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.019,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 2,
+      "sources": [
+        "board:bands:100k-500k"
+      ]
+    },
+    {
+      "symbol": "PAIR",
+      "chain": "robinhood",
+      "address": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
+      "firstLook": "2026-09-06T10:27:14.844Z",
+      "ageH": 9.857212777777777,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 43488883.2498522,
+      "nowFdv": 27359848.7266437,
+      "nowMult": 0.63,
+      "peakMult": 0.74,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.74,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.698,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 20,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "ikun",
+      "chain": "bsc",
+      "address": "0xecb816c7d341a99a206034033cc1ffa873b07777",
+      "firstLook": "2026-09-06T11:03:53.036Z",
+      "ageH": 9.246603888888888,
+      "source": "board:bands:100k-500k",
+      "band": "100k-500k",
+      "phase": "breaking out",
+      "entryFdv": 359773.4783,
+      "nowFdv": 65018,
+      "nowMult": 0.18,
+      "peakMult": 0.69,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.686,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.388,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 1,
+      "sources": [
+        "board:bands:100k-500k"
+      ]
+    },
+    {
+      "symbol": "par",
+      "chain": "robinhood",
+      "address": "0x507b6f349a80114097a67b8b4677367acc15b220",
+      "firstLook": "2026-09-05T23:05:09.252Z",
+      "ageH": 21.2254325,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 6340965.717,
+      "nowFdv": 3155912.034,
+      "nowMult": 0.5,
+      "peakMult": 0.65,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.65,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.333,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 3,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "牛来",
+      "chain": "bsc",
+      "address": "0x5d78989126459d6154ed5ecad430d8c325b54df5",
+      "firstLook": "2026-09-06T14:41:33.060Z",
+      "ageH": 5.618819444444444,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 110000548.9725,
+      "nowFdv": 3373893.1623,
+      "nowMult": 0.03,
+      "peakMult": 0.51,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.507,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 10,
+      "sources": [
+        "board:betas"
+      ]
+    },
+    {
+      "symbol": "Stonks",
+      "chain": "bsc",
+      "address": "0xd0e03d40b46443956601935958eaf6b56b3057c1",
+      "firstLook": "2026-09-06T08:08:47.211Z",
+      "ageH": 12.164888333333334,
+      "source": "board:betas",
+      "band": null,
+      "phase": null,
+      "entryFdv": 686464.3246,
+      "nowFdv": 6569,
+      "nowMult": 0.01,
+      "peakMult": 0.5,
+      "points": [
+        {
+          "h": 60,
+          "mult": 0.214,
+          "gone": false
+        },
+        {
+          "h": 360,
+          "mult": 0.496,
+          "gone": false
+        },
+        {
+          "h": 1440,
+          "mult": null,
+          "gone": null
+        },
+        {
+          "h": 4320,
+          "mult": null,
+          "gone": null
+        }
+      ],
+      "gone": false,
+      "timesSeen": 14,
+      "sources": [
+        "board:betas"
+      ]
+    }
+  ],
+  "looks": {
+    "looks": 481,
+    "resolved24": 0,
+    "base": null,
+    "minN": 8,
+    "bySource": [],
+    "byTheme": [],
+    "byAge": [],
+    "byBand": [],
+    "byLiqFdv": []
+  },
+  "shadow": {
+    "generatedAt": "2026-09-06T20:18:40.844Z",
+    "stakeUsd": 100,
+    "note": "paper only · FDV-marked at pulse cadence (~33 min) · no fees, slippage or fill modelled — treat every number as an upper bound",
+    "strategies": {
+      "acc-100k-500k": {
+        "desc": "accumulating phase, 100k–500k, ≥3d old, liq ≥30k, b/s ≥1.1",
+        "closed": 0,
+        "wins": 0,
+        "realisedUsd": 0,
+        "realisedPct": null,
+        "byReason": {},
+        "open": [],
+        "openPnlUsd": 0,
+        "lastCloses": []
+      },
+      "brk-100k-1m": {
+        "desc": "breaking out, 100k–1m, ≥1d old, liq ≥30k (momentum follow)",
+        "closed": 0,
+        "wins": 0,
+        "realisedUsd": 0,
+        "realisedPct": null,
+        "byReason": {},
+        "open": [
+          {
+            "symbol": "AP",
+            "chain": "robinhood",
+            "token": "0x71dff63057274f5d20330c5f18b5922b97660f9c",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "噜噜",
+            "chain": "bsc",
+            "token": "0x63d9b8830255ba8ceaf3958e6f2906e52b424444",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "Dust",
+            "chain": "bsc",
+            "token": "0x932fb7f52adbc34ff81b4342b8c036b7b8ac4444",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "孙小圣",
+            "chain": "bsc",
+            "token": "0xbb87378b58894338f0937b9691a5a6dc3a5a7777",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "牛来",
+            "chain": "bsc",
+            "token": "0x68d12022732663576bd4f311900e23d22ccc7777",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "OUROBOROS",
+            "chain": "robinhood",
+            "token": "0x87af913718f73168d4566bbf51683792ac2680eb",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "P",
+            "chain": "robinhood",
+            "token": "0x4b1c1725fa83d1a3effe48c992c969788cfac32a",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          }
+        ],
+        "openPnlUsd": 0,
+        "lastCloses": []
+      },
+      "acc-5m-20m": {
+        "desc": "accumulating phase, 5m–20m, liq ≥100k (second-leg hypothesis)",
+        "closed": 0,
+        "wins": 0,
+        "realisedUsd": 0,
+        "realisedPct": null,
+        "byReason": {},
+        "open": [
+          {
+            "symbol": "HEMI",
+            "chain": "bsc",
+            "token": "0x5ffd0eadc186af9512542d0d5e5eafc65d5afc5b",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "ROBINCAT",
+            "chain": "robinhood",
+            "token": "0xded852de9fe9ba9b6f27f39e8e81cf851a5c79cc",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "Stonks",
+            "chain": "bsc",
+            "token": "0xc9d825e83aada475bd4d38c8ca984ed746277777",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "FLORK",
+            "chain": "bsc",
+            "token": "0xf40592daacb3e5abf358789f5688c0b4f64d7777",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "HOOKR",
+            "chain": "robinhood",
+            "token": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "BSB",
+            "chain": "bsc",
+            "token": "0x595deaad1eb5476ff1e649fdb7efc36f1e4679cc",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          },
+          {
+            "symbol": "DBT",
+            "chain": "bsc",
+            "token": "0xb0ad9c2313b9719ea0ccd43d7e7e1fd07e7cbd90",
+            "mult": null,
+            "peak": 1,
+            "openedAt": "2026-09-06T20:18:40.661Z",
+            "holdH": 0
+          }
+        ],
+        "openPnlUsd": 0,
+        "lastCloses": []
+      },
+      "acc-1m-5m": {
+        "desc": "accumulating phase, 1m–5m, liq ≥50k",
+        "closed": 0,
+        "wins": 0,
+        "realisedUsd": 0,
+        "realisedPct": null,
+        "byReason": {},
+        "open": [],
+        "openPnlUsd": 0,
+        "lastCloses": []
+      }
+    }
+  },
+  "study": {
+    "generatedAt": "2026-09-06T09:33:20.896Z",
+    "days": 0.7,
+    "tokens": 10207,
+    "forward": {
+      "robinhood": {
+        "h6": {
+          "<100k": {
+            "n": 572,
+            "x15": 54,
+            "x2": 29,
+            "x3": 15,
+            "dd50": 174,
+            "censored": 899,
+            "medianRatio": 1,
+            "p90Ratio": 1.4233415847759072,
+            "x15_ci": {
+              "p": 0.0944055944055944,
+              "lo": 0.07307665341833566,
+              "hi": 0.12114620231143444
+            },
+            "x2_ci": {
+              "p": 0.050699300699300696,
+              "lo": 0.03552900154931003,
+              "hi": 0.07186442053065083
+            },
+            "x3_ci": {
+              "p": 0.026223776223776224,
+              "lo": 0.015955085289919343,
+              "hi": 0.042813853946148346
+            },
+            "dd50_ci": {
+              "p": 0.3041958041958042,
+              "lo": 0.26790214798157413,
+              "hi": 0.34310198926728036
+            }
+          },
+          "100k-500k": {
+            "n": 126,
+            "x15": 30,
+            "x2": 14,
+            "x3": 3,
+            "dd50": 42,
+            "censored": 120,
+            "medianRatio": 1.1338010682672355,
+            "p90Ratio": 2.1991301909742234,
+            "x15_ci": {
+              "p": 0.23809523809523808,
+              "lo": 0.17217416354451306,
+              "hi": 0.31951417054872056
+            },
+            "x2_ci": {
+              "p": 0.1111111111111111,
+              "lo": 0.06734917883409623,
+              "hi": 0.17788501421343247
+            },
+            "x3_ci": {
+              "p": 0.023809523809523808,
+              "lo": 0.00812980475522534,
+              "hi": 0.06766716632338121
+            },
+            "dd50_ci": {
+              "p": 0.3333333333333333,
+              "lo": 0.2570292256450892,
+              "hi": 0.41949971423242316
+            }
+          },
+          "500k-1m": {
+            "n": 44,
+            "x15": 2,
+            "x2": 1,
+            "x3": 0,
+            "dd50": 25,
+            "censored": 29,
+            "medianRatio": 1.009110213143187,
+            "p90Ratio": 1.2870213707487608,
+            "x15_ci": {
+              "p": 0.045454545454545456,
+              "lo": 0.012554846366981074,
+              "hi": 0.15135271525303162
+            },
+            "x2_ci": {
+              "p": 0.022727272727272728,
+              "lo": 0.00402314838563701,
+              "hi": 0.11807979131537633
+            },
+            "x3_ci": {
+              "p": 0,
+              "lo": 6.381712396155606e-18,
+              "hi": 0.08029831778201396
+            },
+            "dd50_ci": {
+              "p": 0.5681818181818182,
+              "lo": 0.42223890740554393,
+              "hi": 0.7031749583514543
+            }
+          },
+          "1m-5m": {
+            "n": 102,
+            "x15": 12,
+            "x2": 6,
+            "x3": 1,
+            "dd50": 14,
+            "censored": 119,
+            "medianRatio": 1.007347674337571,
+            "p90Ratio": 1.595448230277156,
+            "x15_ci": {
+              "p": 0.11764705882352941,
+              "lo": 0.068593790294468,
+              "hi": 0.19445589905263183
+            },
+            "x2_ci": {
+              "p": 0.058823529411764705,
+              "lo": 0.027235268139653063,
+              "hi": 0.1224374503377698
+            },
+            "x3_ci": {
+              "p": 0.00980392156862745,
+              "lo": 0.0017326897927338993,
+              "hi": 0.053459219626624845
+            },
+            "dd50_ci": {
+              "p": 0.13725490196078433,
+              "lo": 0.08355290247590341,
+              "hi": 0.21728911049442212
+            }
+          },
+          "20m+": {
+            "n": 256,
+            "x15": 15,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 10,
+            "censored": 185,
+            "medianRatio": 1.0439385927452716,
+            "p90Ratio": 1.409114829552171,
+            "x15_ci": {
+              "p": 0.05859375,
+              "lo": 0.03582628728223662,
+              "hi": 0.0944130585345995
+            },
+            "x2_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.014784391721725852
+            },
+            "x3_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.014784391721725852
+            },
+            "dd50_ci": {
+              "p": 0.0390625,
+              "lo": 0.021353804338076474,
+              "hi": 0.07040055678038955
+            }
+          },
+          "5m-20m": {
+            "n": 110,
+            "x15": 30,
+            "x2": 21,
+            "x3": 3,
+            "dd50": 15,
+            "censored": 74,
+            "medianRatio": 1.141153491353171,
+            "p90Ratio": 2.1642646733443063,
+            "x15_ci": {
+              "p": 0.2727272727272727,
+              "lo": 0.19822564984733446,
+              "hi": 0.362567592693178
+            },
+            "x2_ci": {
+              "p": 0.19090909090909092,
+              "lo": 0.12839312602494252,
+              "hi": 0.27428568383015445
+            },
+            "x3_ci": {
+              "p": 0.02727272727272727,
+              "lo": 0.00931780104515347,
+              "hi": 0.07713214343911239
+            },
+            "dd50_ci": {
+              "p": 0.13636363636363635,
+              "lo": 0.08441081826064381,
+              "hi": 0.2128583698041761
+            }
+          }
+        },
+        "h24": {
+          "<100k": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 1471,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "100k-500k": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 246,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "500k-1m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 73,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "1m-5m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 221,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "20m+": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 441,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "5m-20m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 184,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          }
+        }
+      },
+      "bsc": {
+        "h6": {
+          "<100k": {
+            "n": 15,
+            "x15": 8,
+            "x2": 2,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 0,
+            "medianRatio": 1.601278312507294,
+            "p90Ratio": 2.0433846308906087,
+            "x15_ci": {
+              "p": 0.5333333333333333,
+              "lo": 0.3011663015105079,
+              "hi": 0.7519077474025356
+            },
+            "x2_ci": {
+              "p": 0.13333333333333333,
+              "lo": 0.037360469891359285,
+              "hi": 0.3788249920651624
+            },
+            "x3_ci": {
+              "p": 0,
+              "lo": -2.2096511667503485e-17,
+              "hi": 0.20388926630434784
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": -2.2096511667503485e-17,
+              "hi": 0.20388926630434784
+            }
+          },
+          "100k-500k": {
+            "n": 3,
+            "x15": 3,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 9,
+            "medianRatio": 1.611744419676239,
+            "p90Ratio": 1.717140419676773,
+            "x15_ci": {
+              "p": 1,
+              "lo": 0.4384939195509822,
+              "hi": 1
+            },
+            "x2_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.5615060804490177
+            },
+            "x3_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.5615060804490177
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.5615060804490177
+            }
+          },
+          "20m+": {
+            "n": 215,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 139,
+            "medianRatio": 1.0146343793109027,
+            "p90Ratio": 1.0766509743394566,
+            "x15_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.017554249283500026
+            },
+            "x2_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.017554249283500026
+            },
+            "x3_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.017554249283500026
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.017554249283500026
+            }
+          },
+          "5m-20m": {
+            "n": 89,
+            "x15": 11,
+            "x2": 1,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 46,
+            "medianRatio": 1.1195972978763968,
+            "p90Ratio": 1.586977677748194,
+            "x15_ci": {
+              "p": 0.12359550561797752,
+              "lo": 0.07043444583719613,
+              "hi": 0.20790629796730528
+            },
+            "x2_ci": {
+              "p": 0.011235955056179775,
+              "lo": 0.0019861320934023686,
+              "hi": 0.06093393821990546
+            },
+            "x3_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.04137800296418846
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.04137800296418846
+            }
+          },
+          "1m-5m": {
+            "n": 18,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 9,
+            "medianRatio": 1.0561997939929657,
+            "p90Ratio": 1.0891465278410446,
+            "x15_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.1758845505823749
+            },
+            "x2_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.1758845505823749
+            },
+            "x3_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.1758845505823749
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.1758845505823749
+            }
+          },
+          "500k-1m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 2,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          }
+        },
+        "h24": {
+          "<100k": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 15,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "100k-500k": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 12,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "20m+": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 354,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "5m-20m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 135,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "1m-5m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 27,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "500k-1m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 2,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          }
+        }
+      },
+      "solana": {
+        "h6": {
+          "20m+": {
+            "n": 137,
+            "x15": 38,
+            "x2": 27,
+            "x3": 4,
+            "dd50": 0,
+            "censored": 81,
+            "medianRatio": 1.0980085141380151,
+            "p90Ratio": 2.5922843783684058,
+            "x15_ci": {
+              "p": 0.2773722627737226,
+              "lo": 0.20925573554694,
+              "hi": 0.3576335926061058
+            },
+            "x2_ci": {
+              "p": 0.19708029197080293,
+              "lo": 0.1391278030762148,
+              "hi": 0.27155767621399496
+            },
+            "x3_ci": {
+              "p": 0.029197080291970802,
+              "lo": 0.011411340550450554,
+              "hi": 0.07266609111746575
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": 0,
+              "hi": 0.027276032081430486
+            }
+          },
+          "5m-20m": {
+            "n": 22,
+            "x15": 10,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 26,
+            "medianRatio": 1.4523940587519146,
+            "p90Ratio": 1.7585915774970158,
+            "x15_ci": {
+              "p": 0.45454545454545453,
+              "lo": 0.26920014432004846,
+              "hi": 0.6534052671095845
+            },
+            "x2_ci": {
+              "p": 0,
+              "lo": 1.1814722454179233e-17,
+              "hi": 0.14865952572596122
+            },
+            "x3_ci": {
+              "p": 0,
+              "lo": 1.1814722454179233e-17,
+              "hi": 0.14865952572596122
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": 1.1814722454179233e-17,
+              "hi": 0.14865952572596122
+            }
+          },
+          "100k-500k": {
+            "n": 44,
+            "x15": 9,
+            "x2": 4,
+            "x3": 2,
+            "dd50": 7,
+            "censored": 35,
+            "medianRatio": 1.142187172981907,
+            "p90Ratio": 1.9556576441065714,
+            "x15_ci": {
+              "p": 0.20454545454545456,
+              "lo": 0.11153127823467596,
+              "hi": 0.34500863681833227
+            },
+            "x2_ci": {
+              "p": 0.09090909090909091,
+              "lo": 0.035921611478836546,
+              "hi": 0.21159519397917487
+            },
+            "x3_ci": {
+              "p": 0.045454545454545456,
+              "lo": 0.012554846366981074,
+              "hi": 0.15135271525303162
+            },
+            "dd50_ci": {
+              "p": 0.1590909090909091,
+              "lo": 0.07926576557718397,
+              "hi": 0.29366490563782555
+            }
+          },
+          "<100k": {
+            "n": 28,
+            "x15": 14,
+            "x2": 4,
+            "x3": 1,
+            "dd50": 2,
+            "censored": 27,
+            "medianRatio": 1.5908745511707678,
+            "p90Ratio": 2.2913619627015582,
+            "x15_ci": {
+              "p": 0.5,
+              "lo": 0.32632846832446344,
+              "hi": 0.6736715316755366
+            },
+            "x2_ci": {
+              "p": 0.14285714285714285,
+              "lo": 0.05698912930701783,
+              "hi": 0.31490173044877334
+            },
+            "x3_ci": {
+              "p": 0.03571428571428571,
+              "lo": 0.006332356497541882,
+              "hi": 0.17712576118498663
+            },
+            "dd50_ci": {
+              "p": 0.07142857142857142,
+              "lo": 0.01981164744777079,
+              "hi": 0.2264573842591786
+            }
+          },
+          "1m-5m": {
+            "n": 53,
+            "x15": 34,
+            "x2": 23,
+            "x3": 10,
+            "dd50": 0,
+            "censored": 38,
+            "medianRatio": 1.7948042033729956,
+            "p90Ratio": 4.609124033623527,
+            "x15_ci": {
+              "p": 0.6415094339622641,
+              "lo": 0.5069089329999881,
+              "hi": 0.7569823015887636
+            },
+            "x2_ci": {
+              "p": 0.4339622641509434,
+              "lo": 0.30950190698960345,
+              "hi": 0.5673488502023122
+            },
+            "x3_ci": {
+              "p": 0.18867924528301888,
+              "lo": 0.10585211943149556,
+              "hi": 0.31358716447325025
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": -6.469933585737964e-18,
+              "hi": 0.0675843044530766
+            }
+          },
+          "500k-1m": {
+            "n": 31,
+            "x15": 11,
+            "x2": 2,
+            "x3": 2,
+            "dd50": 0,
+            "censored": 13,
+            "medianRatio": 1.3894711287181043,
+            "p90Ratio": 1.8714373373071298,
+            "x15_ci": {
+              "p": 0.3548387096774194,
+              "lo": 0.21116447741565816,
+              "hi": 0.5305236195718509
+            },
+            "x2_ci": {
+              "p": 0.06451612903225806,
+              "lo": 0.017874407775063144,
+              "hi": 0.20718988318746434
+            },
+            "x3_ci": {
+              "p": 0.06451612903225806,
+              "lo": 0.017874407775063144,
+              "hi": 0.20718988318746434
+            },
+            "dd50_ci": {
+              "p": 0,
+              "lo": -1.2347636791715884e-17,
+              "hi": 0.11025900073475385
+            }
+          }
+        },
+        "h24": {
+          "20m+": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 218,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "5m-20m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 48,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "100k-500k": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 79,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "<100k": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 55,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "1m-5m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 91,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          },
+          "500k-1m": {
+            "n": 0,
+            "x15": 0,
+            "x2": 0,
+            "x3": 0,
+            "dd50": 0,
+            "censored": 44,
+            "medianRatio": null,
+            "p90Ratio": null,
+            "x15_ci": null,
+            "x2_ci": null,
+            "x3_ci": null,
+            "dd50_ci": null
+          }
+        }
+      }
+    },
+    "origins": {
+      "robinhood": {
+        "totalPumps": 55,
+        "lift": {
+          "<100k": {
+            "pumps": 45,
+            "pumpShare": 0.8181818181818182,
+            "exposureShare": 0.3959745327582666,
+            "lift": 2.0662485854394568
+          },
+          "100k-500k": {
+            "pumps": 7,
+            "pumpShare": 0.12727272727272726,
+            "exposureShare": 0.09611829944547134,
+            "lift": 1.3241258741258741
+          },
+          "500k-1m": {
+            "pumps": 1,
+            "pumpShare": 0.01818181818181818,
+            "exposureShare": 0.03203943314849045,
+            "lift": 0.5674825174825174
+          },
+          "1m-5m": {
+            "pumps": 1,
+            "pumpShare": 0.01818181818181818,
+            "exposureShare": 0.0860546313411378,
+            "lift": 0.21128227381210676
+          },
+          "5m-20m": {
+            "pumps": 1,
+            "pumpShare": 0.01818181818181818,
+            "exposureShare": 0.09776134729924009,
+            "lift": 0.18598166539343008
+          },
+          "20m+": {
+            "pumps": 0,
+            "pumpShare": 0,
+            "exposureShare": 0.2920517560073937,
+            "lift": 0
+          }
+        },
+        "examples": [
+          {
+            "symbol": "FSD",
+            "originBand": "<100k",
+            "ratio": 56.5,
+            "hoursBeforePeak": 2.4,
+            "originFdv": 22193,
+            "peakFdv": 1254662
+          },
+          {
+            "symbol": "same",
+            "originBand": "<100k",
+            "ratio": 16.4,
+            "hoursBeforePeak": 0.8,
+            "originFdv": 15137,
+            "peakFdv": 248317
+          },
+          {
+            "symbol": "DOHJ",
+            "originBand": "<100k",
+            "ratio": 15.9,
+            "hoursBeforePeak": 2.5,
+            "originFdv": 87352,
+            "peakFdv": 854345
+          },
+          {
+            "symbol": "STOCKBACK",
+            "originBand": "<100k",
+            "ratio": 13,
+            "hoursBeforePeak": 2.2,
+            "originFdv": 31442,
+            "peakFdv": 408139
+          },
+          {
+            "symbol": "Onboard",
+            "originBand": "<100k",
+            "ratio": 11.4,
+            "hoursBeforePeak": 3.2,
+            "originFdv": 55899,
+            "peakFdv": 637572
+          },
+          {
+            "symbol": "FRANK",
+            "originBand": "<100k",
+            "ratio": 11.3,
+            "hoursBeforePeak": 0.7,
+            "originFdv": 4709,
+            "peakFdv": 53200
+          },
+          {
+            "symbol": "FRANK",
+            "originBand": "<100k",
+            "ratio": 11.3,
+            "hoursBeforePeak": 2.8,
+            "originFdv": 31604,
+            "peakFdv": 251234
+          },
+          {
+            "symbol": "GPT6",
+            "originBand": "100k-500k",
+            "ratio": 10.8,
+            "hoursBeforePeak": 6.4,
+            "originFdv": 224214,
+            "peakFdv": 562410
+          }
+        ]
+      },
+      "bsc": {
+        "totalPumps": 0,
+        "lift": {
+          "<100k": {
+            "pumps": 0,
+            "pumpShare": 0,
+            "exposureShare": 0.02663551401869159,
+            "lift": 0
+          },
+          "100k-500k": {
+            "pumps": 0,
+            "pumpShare": 0,
+            "exposureShare": 0.02383177570093458,
+            "lift": 0
+          },
+          "500k-1m": {
+            "pumps": 0,
+            "pumpShare": 0,
+            "exposureShare": 0.002336448598130841,
+            "lift": 0
+          },
+          "1m-5m": {
+            "pumps": 0,
+            "pumpShare": 0,
+            "exposureShare": 0.05,
+            "lift": 0
+          },
+          "5m-20m": {
+            "pumps": 0,
+            "pumpShare": 0,
+            "exposureShare": 0.2504672897196262,
+            "lift": 0
+          },
+          "20m+": {
+            "pumps": 0,
+            "pumpShare": 0,
+            "exposureShare": 0.6467289719626168,
+            "lift": 0
+          }
+        },
+        "examples": []
+      },
+      "solana": {
+        "totalPumps": 7,
+        "lift": {
+          "<100k": {
+            "pumps": 1,
+            "pumpShare": 0.14285714285714285,
+            "exposureShare": 0.10536491058482358,
+            "lift": 1.355832241153342
+          },
+          "100k-500k": {
+            "pumps": 1,
+            "pumpShare": 0.14285714285714285,
+            "exposureShare": 0.138714354760754,
+            "lift": 1.0298656047784966
+          },
+          "500k-1m": {
+            "pumps": 0,
+            "pumpShare": 0,
+            "exposureShare": 0.08216529724504591,
+            "lift": 0
+          },
+          "1m-5m": {
+            "pumps": 1,
+            "pumpShare": 0.14285714285714285,
+            "exposureShare": 0.16481391976800386,
+            "lift": 0.8667783829074152
+          },
+          "5m-20m": {
+            "pumps": 1,
+            "pumpShare": 0.14285714285714285,
+            "exposureShare": 0.09714838086031899,
+            "lift": 1.4705046197583511
+          },
+          "20m+": {
+            "pumps": 3,
+            "pumpShare": 0.42857142857142855,
+            "exposureShare": 0.41179313678105367,
+            "lift": 1.0407444668008048
+          }
+        },
+        "examples": [
+          {
+            "symbol": "PURR",
+            "originBand": "1m-5m",
+            "ratio": 11.1,
+            "hoursBeforePeak": 6.1,
+            "originFdv": 3770011,
+            "peakFdv": 13081614
+          },
+          {
+            "symbol": "SOLCAT",
+            "originBand": "100k-500k",
+            "ratio": 10.1,
+            "hoursBeforePeak": 6.1,
+            "originFdv": 413671,
+            "peakFdv": 2988375
+          },
+          {
+            "symbol": "ZCAT",
+            "originBand": "20m+",
+            "ratio": 4.6,
+            "hoursBeforePeak": 6.1,
+            "originFdv": 56466933,
+            "peakFdv": 99954358
+          },
+          {
+            "symbol": "STONK",
+            "originBand": "20m+",
+            "ratio": 3.7,
+            "hoursBeforePeak": 6.1,
+            "originFdv": 45345150,
+            "peakFdv": 126520599
+          },
+          {
+            "symbol": "memestock",
+            "originBand": "<100k",
+            "ratio": 3.5,
+            "hoursBeforePeak": 6,
+            "originFdv": 67268,
+            "peakFdv": 149685
+          },
+          {
+            "symbol": "STONK",
+            "originBand": "20m+",
+            "ratio": 3.3,
+            "hoursBeforePeak": 6.1,
+            "originFdv": 45286836,
+            "peakFdv": 126217211
+          },
+          {
+            "symbol": "OTC",
+            "originBand": "5m-20m",
+            "ratio": 3.2,
+            "hoursBeforePeak": 6.1,
+            "originFdv": 5045621,
+            "peakFdv": 8385783
+          }
+        ]
+      }
+    }
+  },
+  "health": {
+    "lastTick": "2026-09-06T20:04:14.432Z",
+    "pools": 16796,
+    "watching": 1938,
+    "culled": 12530,
+    "tickMs": 238925,
+    "http429": 14,
+    "captureAt": "2026-09-06T20:16:06.732Z",
+    "captureRows": 257
+  }
+}

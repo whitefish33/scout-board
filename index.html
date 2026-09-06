@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>hood-scout board</title>
+<style>
+  :root { --bg:#0e1116; --panel:#161b22; --line:#262d37; --fg:#e6e9ee; --mute:#8b95a5; --acc:#7cc4ff; --green:#39c46a; --red:#ff5c5c; --amber:#f0b25a; --blue:#5aa7ff; --mono: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding-bottom:60px; }
+  header { position:sticky; top:0; z-index:5; background:rgba(14,17,22,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); padding:10px 14px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:15px; margin:0; letter-spacing:.3px; }
+  header .fresh { color:var(--mute); font-size:12px; }
+  header .fresh.stale { color:var(--amber); }
+  nav { display:flex; gap:6px; overflow-x:auto; padding:8px 14px; border-bottom:1px solid var(--line); scrollbar-width:none; }
+  nav button { flex:0 0 auto; background:var(--panel); border:1px solid var(--line); color:var(--fg); padding:6px 10px; border-radius:999px; font-size:13px; }
+  nav button.on { background:var(--acc); color:#08111c; border-color:var(--acc); font-weight:600; }
+  main { padding:10px 14px; max-width:980px; margin:0 auto; }
+  .bar { display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin:8px 0 10px; }
+  .bar button, .bar select, .bar input { background:var(--panel); border:1px solid var(--line); color:var(--fg); padding:5px 9px; border-radius:8px; font-size:12.5px; }
+  .bar button.on { border-color:var(--acc); color:var(--acc); }
+  .bar input { flex:1 1 140px; min-width:120px; }
+  .sub { color:var(--mute); font-size:12px; margin:4px 0 10px; }
+  .row { display:grid; grid-template-columns: 22px 1fr; gap:4px 8px; align-items:start; padding:9px 0; border-bottom:1px solid var(--line); }
+  .row .addr, .row .acts { grid-column: 2; }
+  .row .ph { font-size:15px; line-height:1.2; }
+  .row .name { font-weight:600; }
+  .row .name .chain { font-weight:500; color:var(--mute); font-size:11.5px; margin-left:6px; border:1px solid var(--line); padding:0 5px; border-radius:6px; }
+  .row .meta { color:var(--mute); font-size:12.5px; margin-top:2px; display:flex; gap:8px; flex-wrap:wrap; }
+  .row .meta b { color:var(--fg); font-weight:500; }
+  .up { color:var(--green); } .dn { color:var(--red); }
+  .addr { font-family:var(--mono); font-size:11.5px; color:var(--mute); margin-top:3px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .addr code { background:var(--panel); padding:2px 6px; border-radius:6px; }
+  .btn { background:var(--panel); border:1px solid var(--line); color:var(--fg); padding:5px 9px; border-radius:8px; font-size:12px; white-space:nowrap; }
+  .btn:active { background:var(--line); }
+  .btn.copied { border-color:var(--green); color:var(--green); }
+  .acts { display:flex; flex-direction:row; gap:6px; }
+  a { color:var(--blue); text-decoration:none; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:10px 12px; margin:8px 0; }
+  .card h3 { margin:0 0 6px; font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; }
+  th, td { text-align:left; padding:5px 6px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th { color:var(--mute); font-weight:500; }
+  .tbl { overflow-x:auto; }
+  .kpi { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:8px; }
+  .kpi div { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:8px 10px; }
+  .kpi small { color:var(--mute); display:block; font-size:11.5px; }
+  .kpi b { font-size:16px; }
+  .empty { color:var(--mute); padding:18px 0; text-align:center; }
+  .warn { background:#2a1d10; border:1px solid #5a3c14; color:#f5c98a; padding:8px 10px; border-radius:10px; font-size:12.5px; margin:8px 0; }
+  .spark { display:inline-flex; gap:2px; align-items:flex-end; height:14px; }
+  .spark i { display:block; width:6px; background:var(--mute); border-radius:1px; }
+  footer { color:var(--mute); font-size:11.5px; padding:14px; text-align:center; }
+  @media (min-width:700px) { .row { grid-template-columns: 22px 1fr auto auto; } .row .addr, .row .acts { grid-column: auto; margin-top:0; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>hood-scout · board</h1>
+  <span class="fresh" id="fresh">loading…</span>
+  <span class="fresh" style="margin-left:auto">scans only · nothing here is a recommendation</span>
+</header>
+<nav id="nav"></nav>
+<main id="main"><div class="empty">loading state.json…</div></main>
+<footer>public scans feed · phases are descriptive (24h/6h windows) · every % is from our own recordings and stated with its n · survivorship bias applies</footer>
+<script>
+(async function () {
+  const $ = (s, el = document) => el.querySelector(s);
+  const h = (tag, attrs = {}, ...kids) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs || {})) { if (k === 'class') e.className = v; else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else if (v != null) e.setAttribute(k, v); } for (const k of kids.flat()) if (k != null) e.append(k.nodeType ? k : document.createTextNode(String(k))); return e; };
+  const usd = (n) => n == null ? '?' : n >= 1e9 ? (n / 1e9).toFixed(1) + 'b' : n >= 1e6 ? (n / 1e6).toFixed(1) + 'm' : n >= 1e3 ? Math.round(n / 1e3) + 'k' : Math.round(n);
+  const pct = (x) => x == null ? '?' : (x > 0 ? '+' : '') + Math.round(x) + '%';
+  const age = (hh) => hh == null ? '?' : hh < 48 ? Math.round(hh) + 'h' : Math.round(hh / 24) + 'd';
+  const NET = { robinhood: 'RH', bsc: 'BSC', solana: 'SOL', base: 'BASE', ethereum: 'ETH' };
+  const ICON = { accumulating: '🟩', 'breaking out': '🚀', quiet: '▫️', churn: '🌀', bleeding: '🟥' };
+  const dex = (t) => `https://dexscreener.com/${t.chain}/${t.address}`;
+  const P = (x) => x == null ? '—' : Math.round(x * 100) + '%';
+
+  let S; try { S = await (await fetch('state.json?ts=' + Date.now(), { cache: 'no-store' })).json(); } catch (e) { $('#main').innerHTML = '<div class="empty">state.json not found yet — the bot publishes it every ~33 min</div>'; return; }
+  if (S.schema !== 'hood-board/1') { $('#main').innerHTML = '<div class="empty">unexpected state schema — refusing to render</div>'; return; }
+  const ageMin = (Date.now() - Date.parse(S.generatedAt)) / 60e3;
+  const fr = $('#fresh'); fr.textContent = `updated ${Math.round(ageMin)} min ago`; if (ageMin > 90) { fr.classList.add('stale'); fr.textContent += ' · STALE (bot or push may be down)'; }
+
+  function copyBtn(addr) { const b = h('button', { class: 'btn', onclick: async () => { try { await navigator.clipboard.writeText(addr); b.textContent = 'copied'; b.classList.add('copied'); setTimeout(() => { b.textContent = 'copy'; b.classList.remove('copied'); }, 1200); } catch { prompt('address', addr); } } }, 'copy'); return b; }
+  function tokenRow(t, extra) {
+    const chg = t.chg24; const cls = chg == null ? '' : chg >= 0 ? 'up' : 'dn';
+    return h('div', { class: 'row' },
+      h('div', { class: 'ph' }, ICON[t.phase] || '▫️'),
+      h('div', null,
+        h('div', { class: 'name' }, t.symbol || '?', h('span', { class: 'chain' }, NET[t.chain] || t.chain)),
+        h('div', { class: 'meta' }, h('span', null, 'fdv ', h('b', null, usd(t.fdv))), h('span', null, age(t.ageH)), h('span', null, 'liq ', h('b', null, usd(t.liq))), h('span', { class: cls }, pct(chg), ' 24h'), t.bs != null ? h('span', null, 'b/s ', h('b', null, t.bs.toFixed(1) + (t.bsProxy ? '*' : ''))) : null, t.themes?.length ? h('span', null, t.themes.join(', ')) : null, extra || null)),
+      h('div', { class: 'addr' }, h('code', null, t.address ? t.address.slice(0, 8) + '…' + t.address.slice(-4) : '?')),
+      h('div', { class: 'acts' }, t.address ? copyBtn(t.address) : null, h('a', { class: 'btn', href: dex(t), target: '_blank', rel: 'noopener' }, 'dexscreener')));
+  }
+
+  const views = {};
+  // ---- bands
+  views.bands = () => {
+    const keys = Object.keys(S.bands); let band = localStorage.getItem('hs.band') || '100k-500k'; if (!S.bands[band]) band = keys[0];
+    let chain = 'all', phase = 'all', q = '';
+    const wrap = h('div');
+    const draw = () => {
+      wrap.innerHTML = '';
+      const bar = h('div', { class: 'bar' });
+      for (const k of keys) bar.append(h('button', { class: k === band ? 'on' : '', onclick: () => { band = k; localStorage.setItem('hs.band', k); draw(); } }, k));
+      bar.append(h('select', { onchange: (e) => { chain = e.target.value; draw(); } }, ...['all', 'robinhood', 'bsc'].map((c) => h('option', { value: c, selected: c === chain ? '' : null }, c === 'all' ? 'all chains' : NET[c]))));
+      bar.append(h('select', { onchange: (e) => { phase = e.target.value; draw(); } }, ...['all', 'accumulating', 'breaking out', 'quiet', 'churn', 'bleeding'].map((c) => h('option', { value: c, selected: c === phase ? '' : null }, c === 'all' ? 'all phases' : (ICON[c] + ' ' + c)))));
+      bar.append(h('input', { placeholder: 'search symbol / theme', value: q, oninput: (e) => { q = e.target.value.toLowerCase(); list(); } }));
+      wrap.append(bar);
+      const b = S.bands[band];
+      wrap.append(h('div', { class: 'sub' }, `${band} · RH+BSC · ≥1d old · liq ≥20k · ${b.rows.length} tokens · capture ${b.at ? new Date(b.at).toUTCString().slice(17, 22) + 'Z' : '?'} · sorted: accumulating → breaking out → quiet → churn → bleeding, then buyers/sellers`));
+      const holder = h('div'); wrap.append(holder);
+      function list() {
+        holder.innerHTML = '';
+        const rows = b.rows.filter((t) => (chain === 'all' || t.chain === chain) && (phase === 'all' || t.phase === phase) && (!q || (t.symbol || '').toLowerCase().includes(q) || (t.themes || []).join(' ').includes(q)));
+        if (!rows.length) holder.append(h('div', { class: 'empty' }, 'nothing in this band passes the filters right now'));
+        for (const t of rows) holder.append(tokenRow(t));
+      }
+      list();
+    };
+    draw();
+    return [wrap, h('div', { class: 'sub' }, '🟩 accumulating = flat price, buyers ≥ sellers, volume alive not churning · 🚀 breaking out · 🌀 churn · 🟥 bleeding · * = buy/sell counts (no unique-wallet figure from DexScreener)')];
+  };
+  // ---- narratives
+  views.narratives = () => {
+    if (!S.narratives?.length) return h('div', { class: 'empty' }, 'no themed clusters in the trending capture right now');
+    return S.narratives.map((c) => h('div', { class: 'card' },
+      h('h3', null, (c.betaSignal ? '🟢 ' : '') + c.tag, h('span', { class: 'sub', style: 'display:inline;margin-left:8px' }, `${c.n} tokens · ${c.chains.map((x) => NET[x] || x).join('+')} · ${usd(c.vol24)} 24h vol${c.fresh ? ` · ${c.fresh} new` : ''}${c.n > 1 ? ` · ${c.runningBetas}/${c.n - 1} followers >+20%` : ''}`)),
+      tokenRow(c.leader, h('span', null, '★ leader')), ...c.members.map((m) => tokenRow(m))));
+  };
+  // ---- lifecycle
+  views.picks = () => {
+    const rows = S.lifecycle || [];
+    if (!rows.length) return h('div', { class: 'empty' }, 'no looks recorded in the last 7 days');
+    const out = [h('div', { class: 'sub' }, `${rows.length} tokens the scans surfaced in the last 7 days (first look wins) · multiple = FDV now ÷ FDV at first look · points at 1h/6h/24h/72h`)];
+    for (const r of rows) {
+      const cls = r.nowMult == null ? '' : r.nowMult >= 1 ? 'up' : 'dn';
+      out.push(h('div', { class: 'row' },
+        h('div', { class: 'ph' }, r.gone ? '💀' : (r.peakMult ?? 0) >= 2 ? '🏁' : (ICON[r.phase] || '▫️')),
+        h('div', null,
+          h('div', { class: 'name' }, r.symbol || '?', h('span', { class: 'chain' }, NET[r.chain] || r.chain), h('span', { class: 'chain' }, r.source.replace('board:', ''))),
+          h('div', { class: 'meta' }, h('span', null, 'looked ', h('b', null, age(r.ageH)), ' ago at ', h('b', null, usd(r.entryFdv))), h('span', { class: cls }, 'now ', h('b', null, r.nowMult != null ? r.nowMult.toFixed(2) + 'x' : (r.gone ? 'gone' : 'unmarked'))), h('span', null, 'peak ', h('b', null, r.peakMult != null ? r.peakMult.toFixed(2) + 'x' : '—')), h('span', null, r.points.map((p) => `${p.h / 60 >= 24 ? p.h / 1440 + 'd' : p.h / 60 + 'h'} ${p.mult != null ? p.mult.toFixed(2) + 'x' : '·'}`).join(' · ')), r.timesSeen > 1 ? h('span', null, `seen ${r.timesSeen}×`) : null)),
+        h('div', { class: 'addr' }, h('code', null, r.address.slice(0, 8) + '…' + r.address.slice(-4))),
+        h('div', { class: 'acts' }, copyBtn(r.address), h('a', { class: 'btn', href: dex({ chain: r.chain, address: r.address }), target: '_blank', rel: 'noopener' }, 'dexscreener'))));
+    }
+    return out;
+  };
+  // ---- loopback
+  views.loopback = () => {
+    const L = S.looks; const out = [];
+    out.push(h('div', { class: 'kpi' }, h('div', null, h('small', null, 'looks recorded'), h('b', null, L.looks)), h('div', null, h('small', null, 'resolved at 24h'), h('b', null, L.resolved24)), h('div', null, h('small', null, 'base rate · 2x within 24h'), h('b', null, L.base ? `${P(L.base.hit2x)} [${P(L.base.lo)}–${P(L.base.hi)}]` : '—'))));
+    const tbl = (title, rows) => rows?.length ? h('div', { class: 'card' }, h('h3', null, title), h('div', { class: 'tbl' }, h('table', null, h('tr', null, ...['bucket', 'n', '2x in 24h', '95% CI', 'median 24h', 'dead'].map((x) => h('th', null, x))), ...rows.map((r) => h('tr', null, h('td', null, r.key), h('td', null, r.n), h('td', null, P(r.hit2x)), h('td', null, `${P(r.lo)}–${P(r.hi)}`), h('td', null, r.median24.toFixed(2) + 'x'), h('td', null, P(r.dead))))))) : null;
+    out.push(tbl('by source', L.bySource), tbl('by band at look', L.byBand), tbl('by theme', L.byTheme), tbl('by age at look', L.byAge), tbl('by liquidity/fdv at look', L.byLiqFdv));
+    if (!L.resolved24) out.push(h('div', { class: 'empty' }, 'nothing resolved at 24h yet — looks resolve at 1h/6h/24h/72h on each pulse'));
+    out.push(h('div', { class: 'sub' }, `buckets with fewer than ${L.minN} resolved looks are hidden`));
+    return out;
+  };
+  // ---- shadow
+  views.shadow = () => {
+    const sh = S.shadow; const out = [h('div', { class: 'warn' }, sh.note)];
+    for (const [name, s] of Object.entries(sh.strategies)) {
+      out.push(h('div', { class: 'card' }, h('h3', null, name, h('span', { class: 'sub', style: 'display:inline;margin-left:8px' }, s.desc)),
+        h('div', { class: 'kpi' }, h('div', null, h('small', null, 'closed'), h('b', null, `${s.closed} (${s.wins} wins)`)), h('div', null, h('small', null, 'realised (closes only)'), h('b', { class: s.realisedUsd >= 0 ? 'up' : 'dn' }, `${s.realisedUsd < 0 ? '-' : '+'}$${Math.abs(s.realisedUsd).toFixed(0)}${s.realisedPct != null ? ` · ${s.realisedPct}%` : ''}`)), h('div', null, h('small', null, 'open'), h('b', null, `${s.open.length} · ${s.openPnlUsd < 0 ? '-' : '+'}$${Math.abs(s.openPnlUsd).toFixed(0)} unrealised`))),
+        s.open.length ? h('div', { class: 'tbl' }, h('table', null, h('tr', null, ...['open', 'chain', 'mult', 'peak', 'held'].map((x) => h('th', null, x))), ...s.open.map((o) => h('tr', null, h('td', null, o.symbol), h('td', null, NET[o.chain] || o.chain), h('td', { class: o.mult == null ? '' : o.mult >= 1 ? 'up' : 'dn' }, o.mult != null ? o.mult.toFixed(2) + 'x' : '—'), h('td', null, o.peak ? o.peak.toFixed(2) + 'x' : '—'), h('td', null, o.holdH + 'h'))))) : null,
+        s.lastCloses.length ? h('div', { class: 'tbl' }, h('table', null, h('tr', null, ...['closed', 'mult', 'pnl', 'reason', 'held'].map((x) => h('th', null, x))), ...s.lastCloses.map((c) => h('tr', null, h('td', null, `${c.symbol} ${NET[c.chain] || ''}`), h('td', null, c.mult?.toFixed?.(2) + 'x'), h('td', { class: c.pnlUsd >= 0 ? 'up' : 'dn' }, `${c.pnlUsd < 0 ? '-' : '+'}$${Math.abs(c.pnlUsd).toFixed(0)}`), h('td', null, c.reason), h('td', null, c.holdH + 'h'))))) : null));
+    }
+    out.push(h('div', { class: 'sub' }, `rules for every strategy: $${sh.stakeUsd} per entry · max 8 open · no re-entry for 7d · stop −40% · take half at +100% then trail 0.7× peak · time stop 72h`));
+    return out;
+  };
+  // ---- study
+  views.study = () => {
+    const st = S.study; if (!st) return h('div', { class: 'empty' }, 'bands study not generated yet (nightly)');
+    const out = [h('div', { class: 'sub' }, `from our own recordings · ${st.tokens} tokens · ${st.days} days · censored windows counted separately · survivorship bias: dead tokens leave the sample, so every % is optimistic`)];
+    for (const [net, hs] of Object.entries(st.forward || {})) for (const [hz, bands] of Object.entries(hs)) {
+      const rows = Object.entries(bands).filter(([, c]) => c.n > 0);
+      if (!rows.length) continue;
+      out.push(h('div', { class: 'card' }, h('h3', null, `${NET[net] || net} · next ${hz.replace('h', '')}h by FDV band at entry`), h('div', { class: 'tbl' }, h('table', null, h('tr', null, ...['band', 'n', 'censored', '≥1.5x', '≥2x', '≥3x', 'halved', 'median peak', 'p90 peak'].map((x) => h('th', null, x))), ...rows.map(([k, c]) => h('tr', null, h('td', null, k), h('td', null, c.n), h('td', null, c.censored), h('td', null, P(c.x15 / c.n)), h('td', null, `${P(c.x2 / c.n)} [${P(c.x2_ci?.lo)}–${P(c.x2_ci?.hi)}]`), h('td', null, P(c.x3 / c.n)), h('td', null, P(c.dd50 / c.n)), h('td', null, c.medianRatio ? c.medianRatio.toFixed(2) + 'x' : '—'), h('td', null, c.p90Ratio ? c.p90Ratio.toFixed(2) + 'x' : '—')))))));
+    }
+    for (const [net, o] of Object.entries(st.origins || {})) {
+      if (!o.totalPumps) continue;
+      out.push(h('div', { class: 'card' }, h('h3', null, `${NET[net] || net} · where ≥3x moves started (band 6h before peak) · ${o.totalPumps} pumps`), h('div', { class: 'tbl' }, h('table', null, h('tr', null, ...['band', 'pumps', 'share of pumps', 'share of exposure', 'lift'].map((x) => h('th', null, x))), ...Object.entries(o.lift).map(([k, x]) => h('tr', null, h('td', null, k), h('td', null, x.pumps), h('td', null, P(x.pumpShare)), h('td', null, P(x.exposureShare)), h('td', null, x.lift == null ? '—' : x.lift.toFixed(2)))))), h('div', { class: 'sub' }, 'e.g. ' + o.examples.map((e) => `${e.symbol} ${e.originBand}→${e.ratio}x in ${e.hoursBeforePeak}h`).join(' · '))));
+    }
+    return out;
+  };
+  // ---- health
+  views.health = () => { const hh = S.health; return h('div', { class: 'kpi' }, h('div', null, h('small', null, 'recorder last tick'), h('b', null, hh.lastTick ? new Date(hh.lastTick).toUTCString().slice(17, 25) + 'Z' : '—')), h('div', null, h('small', null, 'pools in registry'), h('b', null, hh.pools ?? '—')), h('div', null, h('small', null, 'watching'), h('b', null, hh.watching ?? '—')), h('div', null, h('small', null, 'culled'), h('b', null, hh.culled ?? '—')), h('div', null, h('small', null, 'last tick'), h('b', null, hh.tickMs ? Math.round(hh.tickMs / 1000) + 's · ' + (hh.http429 ?? '?') + '×429' : '—')), h('div', null, h('small', null, 'band capture'), h('b', null, hh.captureAt ? `${hh.captureRows} rows · ${new Date(hh.captureAt).toUTCString().slice(17, 22)}Z` : '—'))); };
+
+  const TABS = [['bands', 'bands'], ['picks', 'picks · lifecycle'], ['narratives', 'narratives'], ['shadow', 'shadow book'], ['loopback', 'loopback'], ['study', 'study'], ['health', 'health']];
+  let tab = location.hash.slice(1) || localStorage.getItem('hs.tab') || 'bands'; if (!views[tab]) tab = 'bands';
+  const nav = $('#nav'), main = $('#main');
+  function render() { nav.innerHTML = ''; for (const [k, label] of TABS) nav.append(h('button', { class: k === tab ? 'on' : '', onclick: () => { tab = k; localStorage.setItem('hs.tab', k); location.hash = k; render(); } }, label)); main.innerHTML = ''; const v = views[tab](); main.append(...(Array.isArray(v) ? v : [v]).filter(Boolean)); }
+  render();
+})();
+</script>
+</body>
+</html>
