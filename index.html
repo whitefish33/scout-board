@@ -87,7 +87,7 @@
   const ageMin = (Date.now() - Date.parse(S.generatedAt)) / 60e3;
   const fr = $('#fresh'); fr.textContent = `updated ${Math.round(ageMin)} min ago`; if (ageMin > 90) { fr.classList.add('stale'); fr.textContent += ' · STALE (bot or push may be down)'; }
 
-  function copyBtn(addr) { const b = h('button', { class: 'btn', onclick: async () => { try { await navigator.clipboard.writeText(addr); b.textContent = 'copied'; b.classList.add('copied'); setTimeout(() => { b.textContent = 'copy'; b.classList.remove('copied'); }, 1200); } catch { prompt('address', addr); } } }, 'copy'); return b; }
+  function copyBtn(addr, chain) { if (chain === 'solana' && !/[A-Z]/.test(addr || '')) return h('span', { class: 'sub', style: 'display:inline', title: 'this Solana address was stored lowercased by an older recorder; use the dexscreener link' }, 'addr?'); const b = h('button', { class: 'btn', onclick: async () => { try { await navigator.clipboard.writeText(addr); b.textContent = 'copied'; b.classList.add('copied'); setTimeout(() => { b.textContent = 'copy'; b.classList.remove('copied'); }, 1200); } catch { prompt('address', addr); } } }, 'copy'); return b; }
   function spark(series) {
     if (!series || series.length < 2) return h('div', null, 'no history yet — our observations of this token start when a feed first shows it');
     const xs = series.map((p) => p[0]), ys = series.map((p) => p[1]); const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
@@ -107,7 +107,7 @@
         h('div', { class: 'name', onclick: () => { if (detail) { detail.remove(); detail = null; row.classList.remove('open'); return; } row.classList.add('open'); detail = h('div', { class: 'detail' }, spark(t.series), h('div', null, 'first seen by us ', h('b', null, t.firstSeen ? age((Date.now() - Date.parse(t.firstSeen)) / 3600e3) + ' ago' : '—'), t.peak7d ? [' · 7d peak ', h('b', null, usd(t.peak7d)), t.retrace != null ? ` (now ${Math.round(t.retrace * 100)}% of it)` : ''] : null, t.vol24 != null ? [' · 24h vol ', h('b', null, usd(t.vol24))] : null, t.chg6 != null ? [' · 6h ', h('b', { class: t.chg6 >= 0 ? 'up' : 'dn' }, pct(t.chg6))] : null, t.quote ? [' · quote ', h('b', null, t.quote)] : null, t.dex ? [' · ', t.dex] : null), h('div', null, 'would be picked now by: ', t.picks?.length ? t.picks.map((p) => h('span', { class: 'tag' }, p)) : h('b', null, 'no strategy'))); row.append(detail); } }, t.symbol || '?', h('span', { class: 'chain' }, NET[t.chain] || t.chain), ...(t.picks || []).slice(0, 2).map((p) => h('span', { class: 'tag', style: 'margin-left:6px' }, p))),
         h('div', { class: 'meta' }, h('span', null, 'fdv ', h('b', null, usd(t.fdv))), h('span', null, age(t.ageH)), h('span', null, 'liq ', h('b', null, usd(t.liq))), h('span', { class: cls }, pct(chg), ' 24h'), t.bs != null ? h('span', null, 'b/s ', h('b', null, t.bs.toFixed(1) + (t.bsProxy ? '*' : ''))) : null, t.retrace != null && t.retrace <= 0.6 ? h('span', { class: 'dn' }, `↓${Math.round((1 - t.retrace) * 100)}% from 7d peak ${usd(t.peak7d)}`) : null, t.themes?.length ? h('span', null, t.themes.join(', ')) : null, extra || null)),
       h('div', { class: 'addr' }, h('code', null, t.address ? t.address.slice(0, 8) + '…' + t.address.slice(-4) : '?')),
-      h('div', { class: 'acts' }, t.address ? copyBtn(t.address) : null, h('a', { class: 'btn', href: dex(t), target: '_blank', rel: 'noopener' }, 'dexscreener')));
+      h('div', { class: 'acts' }, t.address ? copyBtn(t.address, t.chain) : null, h('a', { class: 'btn', href: dex(t), target: '_blank', rel: 'noopener' }, 'dexscreener')));
     return row;
   }
 
@@ -121,12 +121,12 @@
       wrap.innerHTML = '';
       const bar = h('div', { class: 'bar' });
       for (const k of keys) bar.append(h('button', { class: k === band ? 'on' : '', onclick: () => { band = k; localStorage.setItem('hs.band', k); draw(); } }, k));
-      bar.append(h('select', { onchange: (e) => { chain = e.target.value; draw(); } }, ...['all', 'robinhood', 'bsc'].map((c) => h('option', { value: c, selected: c === chain ? '' : null }, c === 'all' ? 'all chains' : NET[c]))));
+      bar.append(h('select', { onchange: (e) => { chain = e.target.value; draw(); } }, ...['all', ...[...new Set(Object.values(S.bands).flatMap((x) => x.rows.map((r) => r.chain)))].sort()].map((c) => h('option', { value: c, selected: c === chain ? '' : null }, c === 'all' ? 'all chains' : NET[c]))));
       bar.append(h('select', { onchange: (e) => { phase = e.target.value; draw(); } }, ...['all', 'accumulating', 'breaking out', 'quiet', 'churn', 'bleeding'].map((c) => h('option', { value: c, selected: c === phase ? '' : null }, c === 'all' ? 'all phases' : (ICON[c] + ' ' + c)))));
       bar.append(h('input', { placeholder: 'search symbol / theme', value: q, oninput: (e) => { q = e.target.value.toLowerCase(); list(); } }));
       wrap.append(bar);
       const b = S.bands[band];
-      wrap.append(h('div', { class: 'sub' }, `${band} · RH+BSC · ≥1d old · liq ≥20k · ${b.rows.length} tokens · capture ${b.at ? new Date(b.at).toUTCString().slice(17, 22) + 'Z' : '?'} · sorted: accumulating → breaking out → quiet → churn → bleeding, then buyers/sellers`));
+      wrap.append(h('div', { class: 'sub' }, `${band} · ${[...new Set(b.rows.map((r) => r.chain))].map((c) => NET[c] || c).join('+') || '—'} · ≥1d old · liq ≥20k · ${b.rows.length} tokens · capture ${b.at ? new Date(b.at).toUTCString().slice(17, 22) + 'Z' : '?'} · sorted: accumulating → breaking out → quiet → churn → bleeding, then buyers/sellers`));
       const holder = h('div'); wrap.append(holder);
       function list() {
         holder.innerHTML = '';
@@ -159,7 +159,7 @@
           h('div', { class: 'name' }, r.symbol || '?', h('span', { class: 'chain' }, NET[r.chain] || r.chain), h('span', { class: 'chain' }, r.source.replace('board:', ''))),
           h('div', { class: 'meta' }, h('span', null, 'looked ', h('b', null, age(r.ageH)), ' ago at ', h('b', null, usd(r.entryFdv))), h('span', { class: cls }, 'now ', h('b', null, r.nowMult != null ? r.nowMult.toFixed(2) + 'x' : (r.gone ? 'gone' : 'unmarked'))), h('span', null, 'peak ', h('b', null, r.peakMult != null ? r.peakMult.toFixed(2) + 'x' : '—')), h('span', null, r.points.map((p) => `${p.h / 60 >= 24 ? p.h / 1440 + 'd' : p.h / 60 + 'h'} ${p.mult != null ? p.mult.toFixed(2) + 'x' : '·'}`).join(' · ')), r.timesSeen > 1 ? h('span', null, `seen ${r.timesSeen}×`) : null)),
         h('div', { class: 'addr' }, h('code', null, r.address.slice(0, 8) + '…' + r.address.slice(-4))),
-        h('div', { class: 'acts' }, copyBtn(r.address), h('a', { class: 'btn', href: dex({ chain: r.chain, address: r.address }), target: '_blank', rel: 'noopener' }, 'dexscreener'))));
+        h('div', { class: 'acts' }, copyBtn(r.address, r.chain), h('a', { class: 'btn', href: dex({ chain: r.chain, address: r.address }), target: '_blank', rel: 'noopener' }, 'dexscreener'))));
     }
     return out;
   };
@@ -168,7 +168,7 @@
     const L = S.looks; const out = [];
     out.push(h('div', { class: 'kpi' }, h('div', null, h('small', null, 'looks recorded'), h('b', null, L.looks)), h('div', null, h('small', null, 'resolved at 24h'), h('b', null, L.resolved24)), h('div', null, h('small', null, 'base rate · 2x within 24h'), h('b', null, L.base ? `${P(L.base.hit2x)} [${P(L.base.lo)}–${P(L.base.hi)}]` : '—'))));
     const tbl = (title, rows) => rows?.length ? h('div', { class: 'card' }, h('h3', null, title), h('div', { class: 'tbl' }, h('table', null, h('tr', null, ...['bucket', 'n', '2x in 24h', '95% CI', 'median 24h', 'dead'].map((x) => h('th', null, x))), ...rows.map((r) => h('tr', null, h('td', null, r.key), h('td', null, r.n), h('td', null, P(r.hit2x)), h('td', null, `${P(r.lo)}–${P(r.hi)}`), h('td', null, r.median24.toFixed(2) + 'x'), h('td', null, P(r.dead))))))) : null;
-    out.push(tbl('by source', L.bySource), tbl('by band at look', L.byBand), tbl('by theme', L.byTheme), tbl('by age at look', L.byAge), tbl('by liquidity/fdv at look', L.byLiqFdv));
+    out.push(tbl('by chain', L.byChain), tbl('by source', L.bySource), tbl('by phase at look (bands board)', L.byPhase), tbl('by chain × band (bands board)', L.byChainBand), tbl('by band at look (bands board)', L.byBand), tbl('by size at look (all looks)', L.bySize), tbl('by theme', L.byTheme), tbl('by age at look', L.byAge), tbl('by liquidity/fdv at look', L.byLiqFdv));
     if (!L.resolved24) out.push(h('div', { class: 'empty' }, 'nothing resolved at 24h yet — looks resolve at 1h/6h/24h/72h on each pulse'));
     out.push(h('div', { class: 'sub' }, `buckets with fewer than ${L.minN} resolved looks are hidden`));
     return out;
@@ -179,6 +179,7 @@
     for (const [name, s] of Object.entries(sh.strategies)) {
       out.push(h('div', { class: 'card' }, h('h3', null, name, h('span', { class: 'sub', style: 'display:inline;margin-left:8px' }, s.desc)),
         h('div', { class: 'kpi' }, h('div', null, h('small', null, 'closed'), h('b', null, `${s.closed} (${s.wins} wins)`)), h('div', null, h('small', null, 'realised (closes only)'), h('b', { class: s.realisedUsd >= 0 ? 'up' : 'dn' }, `${s.realisedUsd < 0 ? '-' : '+'}$${Math.abs(s.realisedUsd).toFixed(0)}${s.realisedPct != null ? ` · ${s.realisedPct}%` : ''}`)), h('div', null, h('small', null, 'open'), h('b', null, `${s.open.length} · ${s.openPnlUsd < 0 ? '-' : '+'}$${Math.abs(s.openPnlUsd).toFixed(0)} unrealised`))),
+        s.byChain && Object.keys(s.byChain).length ? h('div', { class: 'sub' }, 'by chain: ' + Object.entries(s.byChain).map(([c, x]) => `${NET[c] || c} ${x.closed} closes, ${x.wins} wins, ${x.realisedUsd < 0 ? '-' : '+'}$${Math.abs(x.realisedUsd).toFixed(0)}`).join(' · ')) : null,
         s.open.length ? h('div', { class: 'tbl' }, h('table', null, h('tr', null, ...['open', 'chain', 'mult', 'peak', 'held'].map((x) => h('th', null, x))), ...s.open.map((o) => h('tr', null, h('td', null, o.symbol), h('td', null, NET[o.chain] || o.chain), h('td', { class: o.mult == null ? '' : o.mult >= 1 ? 'up' : 'dn' }, o.mult != null ? o.mult.toFixed(2) + 'x' : '—'), h('td', null, o.peak ? o.peak.toFixed(2) + 'x' : '—'), h('td', null, o.holdH + 'h'))))) : null,
         s.lastCloses.length ? h('div', { class: 'tbl' }, h('table', null, h('tr', null, ...['closed', 'mult', 'pnl', 'reason', 'held'].map((x) => h('th', null, x))), ...s.lastCloses.map((c) => h('tr', null, h('td', null, `${c.symbol} ${NET[c.chain] || ''}`), h('td', null, c.mult?.toFixed?.(2) + 'x'), h('td', { class: c.pnlUsd >= 0 ? 'up' : 'dn' }, `${c.pnlUsd < 0 ? '-' : '+'}$${Math.abs(c.pnlUsd).toFixed(0)}`), h('td', null, c.reason), h('td', null, c.holdH + 'h'))))) : null));
     }
